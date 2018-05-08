@@ -228,7 +228,6 @@ namespace PruebaConexionNET
             }
 
             Console.WriteLine("Presione cualquier tecla para salir.");
-            Console.WriteLine("Hola mundo!");
             Console.ReadKey();
 
             /* FINALMENTE, SI DESEO EJECUTAR UNA FUNCIÓN ALMACENADA:
