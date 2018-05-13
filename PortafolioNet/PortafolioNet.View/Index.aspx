@@ -20,10 +20,11 @@
 </head>
 
 <body>
+    <form id="form1" runat="server">
 <!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="Index.aspx">LEXIS</a>
+    <div class="header-content clearfix"> <a class="logo" href="Index.aspx">LINDA SONRISA</a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="#intro">Nosotros</a></li>
@@ -225,22 +226,22 @@
 </section>
 <!-- Testimonials section --> 
 <!-- services section -->
-<section id="login" class="services service-section">
+        <div class="form-group">
+<section id="login" class="section">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 conForm">
         <h5>Ingresar como usuario</h5>
         <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
         <div id="message"></div>
-        <form method="post" action="" name="cform" id="cform">
           <input name="User" id="user" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Usuario" >
-          <input name="Password" id="password" type="password" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Contraseña" >
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Ingresar">
+          <input name="Password" id="password" type="password" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Contraseña" >          
+            <asp:Button ID="sumbit" runat="server" Text="Ingresar" class="submitBnt"  />
           <div id="simple-msg"></div>
-        </form>
       </div>
     </div>
 </section>
+            </div>
 <!-- services section --> 
 <!-- contact section -->
 <section id="contact" class="section">
@@ -250,13 +251,11 @@
         <h5>Shoot An Email</h5>
         <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
         <div id="message"></div>
-        <form method="post" action="#" name="cform" id="cform">
           <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
           <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
           <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Project Details..."></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
+            <asp:Button ID="BtnIngresar" runat="server" Text="Enviar" class="submitBnt"  />
           <div id="simple-msg"></div>
-        </form>
       </div>
     </div>
   </div>
@@ -312,5 +311,6 @@
 <script src="js/modernizr.js"></script> 
 <script src="js/main.js"></script> 
 <script type="text/javascript" src="js/jquery.contact.js"></script>
+        </form>
 </body>
 </html>
