@@ -139,13 +139,13 @@ namespace PortafolioNet.View {
         protected global::System.Web.UI.WebControls.Button submit;
         
         /// <summary>
-        /// Control register.
+        /// Control btnRegister.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button register;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
         
         /// <summary>
         /// Control contact.

@@ -63,6 +63,11 @@ namespace PortafolioNet.View
             args.IsValid = args.Value.Length > 5 && args.Value.Length < 19;
         }
 
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CrearUsuario.aspx");
+        }
+
         //public void UpdateVisitNumber()
         //{
         //    VisitNumber vn = new VisitNumber();

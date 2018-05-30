@@ -49,15 +49,6 @@ namespace PortafolioNet.View {
         protected global::System.Web.UI.WebControls.FileUpload AtUploader;
         
         /// <summary>
-        /// Control fileValidator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator fileValidator;
-        
-        /// <summary>
         /// Control txtMessage.
         /// </summary>
         /// <remarks>
@@ -76,12 +67,21 @@ namespace PortafolioNet.View {
         protected global::System.Web.UI.WebControls.Button btnSend;
         
         /// <summary>
-        /// Control lblMensajePrueba.
+        /// Control fileValidator.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajePrueba;
+        protected global::System.Web.UI.WebControls.CustomValidator fileValidator;
+        
+        /// <summary>
+        /// Control lblErrorText.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorText;
     }
 }

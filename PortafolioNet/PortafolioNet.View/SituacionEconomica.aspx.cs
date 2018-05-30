@@ -16,17 +16,12 @@ namespace PortafolioNet.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (Session["ses"] == null)
-                {
-                    Response.Redirect("Index.aspx");
-                }
-            }
+
         }
 
         protected void submit_Click(object sender, EventArgs e)
         {
+            lblErrorText.Text = "";
             if (Page.IsValid && AtUploader.HasFile)
             {
                 User usr = (User)Session["ses"];
@@ -40,16 +35,19 @@ namespace PortafolioNet.View
                 //y enviamos
                 if (oMail.enviaMail())
                 {
-
+                    lblErrorText.Text = "Email enviado con éxito";
                 }
                 else
                 {
-                    lblMensajePrueba.Text = "Error durante el envío de Email";
+                    lblErrorText.Text = "Error durante el envío de Email";
                 }
             }
             else
             {
-                lblMensajePrueba.Text = "Adjunte archivo por favor";
+                if (!AtUploader.HasFile)
+                {
+                    lblErrorText.Text = "Adjunte archivo por favor";
+                }
             }
         }
 
@@ -69,8 +67,6 @@ namespace PortafolioNet.View
             string fileExtension = Path.GetExtension(AtUploader.PostedFile.FileName);
             int fileLength = AtUploader.PostedFile.ContentLength;
             Boolean isFileValid = false ;
-            if (AtUploader.HasFile)
-            { 
             if (isValidFileFormat(fileExtension))
             {
                 if (isValidFileLength(fileLength))
@@ -85,11 +81,6 @@ namespace PortafolioNet.View
             else
             {
                 fileValidator.ErrorMessage = "El archivo debe estar en formato .zip, .rar o .7z";
-            }
-            }
-            else
-            {
-                fileValidator.ErrorMessage = "Por favor, adjunte un archivo para acreditar su situación";
             }
             args.IsValid = isFileValid;
         }
