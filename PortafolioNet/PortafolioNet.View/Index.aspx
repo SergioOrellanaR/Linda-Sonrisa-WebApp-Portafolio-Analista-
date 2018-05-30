@@ -31,7 +31,7 @@
           <li><a href="#services">Servicios</a></li>
           <li><a href="#teams">Nuestro equipo</a></li>
           <li><a href="#testimonials">Testimonios</a></li>
-          <li><a href="#contact"><asp:Label ID="lblSituacionEconomica" runat="server" Text="Situacion socioeconómica" Visible ="false"></asp:Label></a></li>
+          <li><a href="SituacionEconomica.aspx"><asp:Label ID="lblSituacionEconomica" runat="server" Text="Situacion socioeconómica" Visible ="false"></asp:Label></a></li>
           <li><a href="#contact">Contacto</a></li>
           <li><a href="#login"><asp:Label ID="lblLogin" runat="server" Text="Login/Crear Usuario"></asp:Label></a></li>
           <li><a href="LoginClose.aspx"><asp:Label ID="lblCerrarSesion" runat="server" Text="Cerrar Sesión" Visible ="false"></asp:Label></a></li>

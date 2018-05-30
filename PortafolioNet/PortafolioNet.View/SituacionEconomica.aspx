@@ -61,11 +61,15 @@
         <div id="message"></div>    
           <div class="form-group">     
               <label>Adjuntar: </label>&nbsp; &nbsp;
-              <input type="submit" id="archivo" name="subir" class="submitBnt" value="Subir Archivo">
+              <asp:FileUpload ID="AtUploader" runat="server" /><br />
+              <asp:CustomValidator ID="fileValidator" runat="server" ErrorMessage="" OnServerValidate="fileValidator_ServerValidate" ControlToValidate="AtUploader"></asp:CustomValidator>
+              <br />
           </div>
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Deje su comentario..."></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
+          <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" MaxLength="500" Width="600px"></asp:TextBox><br />
+          <asp:Button ID="btnSend" runat="server" Text="Enviar" class="submitBnt" OnClick="submit_Click"   />
           <input type="submit" id="volver" name="volver" class="volverBnt" value="Volver">
+          <br />
+          <asp:Label ID="lblMensajePrueba" runat="server" Text=""></asp:Label>
           <div id="simple-msg"></div>
       </div>
     </div>
