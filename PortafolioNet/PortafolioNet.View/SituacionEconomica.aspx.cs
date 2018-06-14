@@ -4,21 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using PortafolioNet.Business;
-using System.Net.Mail;
-using System.IO;
 
 namespace PortafolioNet.View
 {
     public partial class SituacionEconomica : System.Web.UI.Page
     {
         public const int MAX_MB = 25165824;
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void submit_Click(object sender, EventArgs e)
         {
             lblErrorText.Text = "";
@@ -57,7 +52,7 @@ namespace PortafolioNet.View
             return value.Equals(".rar") || value.Equals(".zip") || value.Equals(".7z");
         }
 
-        private Boolean isValidFileLength (int fileLength)
+        private Boolean isValidFileLength(int fileLength)
         {
             return fileLength < MAX_MB;
         }
@@ -66,7 +61,7 @@ namespace PortafolioNet.View
         {
             string fileExtension = Path.GetExtension(AtUploader.PostedFile.FileName);
             int fileLength = AtUploader.PostedFile.ContentLength;
-            Boolean isFileValid = false ;
+            Boolean isFileValid = false;
             if (isValidFileFormat(fileExtension))
             {
                 if (isValidFileLength(fileLength))
