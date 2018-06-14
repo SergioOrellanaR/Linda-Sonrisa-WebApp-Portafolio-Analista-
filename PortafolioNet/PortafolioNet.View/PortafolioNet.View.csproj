@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -67,7 +68,45 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agosto.aspx" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Oracle.ManagedDataAccess.dll" />
+    <Content Include="bin\PortafolioNet.Business.dll" />
+    <Content Include="bin\PortafolioNet.Business.pdb" />
+    <Content Include="bin\PortafolioNet.Data.dll" />
+    <Content Include="bin\PortafolioNet.Data.pdb" />
+    <Content Include="bin\PortafolioNet.View.dll" />
+    <Content Include="bin\PortafolioNet.View.pdb" />
     <Content Include="CrearUsuario.aspx" />
+    <Content Include="ElegirHora.aspx" />
+    <Content Include="Estilos\css\animate.css" />
+    <Content Include="Estilos\css\bootstrap-datepicker.css" />
+    <Content Include="Estilos\css\bootstrap.css" />
+    <Content Include="Estilos\css\jquery.timepicker.css" />
+    <Content Include="Estilos\css\owl.carousel.min.css" />
+    <Content Include="Estilos\css\style.css" />
+    <Content Include="Estilos\css\_custom.css" />
+    <Content Include="Estilos\fonts\flaticon\backup.txt" />
+    <Content Include="Estilos\fonts\flaticon\font\flaticon.css" />
+    <Content Include="Estilos\fonts\flaticon\font\flaticon.html" />
+    <Content Include="Estilos\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="Estilos\fonts\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Estilos\fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Estilos\fonts\ionicons\cheatsheet.html" />
+    <Content Include="Estilos\fonts\ionicons\css\ionicons.css" />
+    <Content Include="Estilos\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="Estilos\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="Estilos\js\bootstrap-datepicker.js" />
+    <Content Include="Estilos\js\bootstrap.min.js" />
+    <Content Include="Estilos\js\jquery-3.2.1.min.js" />
+    <Content Include="Estilos\js\jquery.timepicker.min.js" />
+    <Content Include="Estilos\js\jquery.waypoints.min.js" />
+    <Content Include="Estilos\js\main.js" />
+    <Content Include="Estilos\js\owl.carousel.min.js" />
+    <Content Include="Estilos\js\popper.min.js" />
+    <Content Include="Estilos\js\selectorRegistro.js" />
+    <Content Include="Estilos\js\validators.js" />
     <Content Include="fonts\elegant-theme-line.eot" />
     <Content Include="fonts\elegant-theme-line.ttf" />
     <Content Include="fonts\elegant-theme-line.woff" />
@@ -78,6 +117,116 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Estilos\css\bootstrap.css.map" />
+    <Content Include="Estilos\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="Estilos\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="Estilos\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="Estilos\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="Estilos\fonts\flaticon\license\license.pdf" />
+    <Content Include="Estilos\fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Estilos\fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Estilos\fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Estilos\fonts\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Estilos\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="Estilos\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Estilos\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="Estilos\fonts\ionicons\_DS_Store" />
+    <Content Include="Estilos\fonts\_DS_Store" />
+    <Content Include="Estilos\scss\bootstrap-grid.scss" />
+    <Content Include="Estilos\scss\bootstrap-reboot.scss" />
+    <Content Include="Estilos\scss\bootstrap.scss" />
+    <Content Include="Estilos\scss\mixins\_alert.scss" />
+    <Content Include="Estilos\scss\mixins\_background-variant.scss" />
+    <Content Include="Estilos\scss\mixins\_badge.scss" />
+    <Content Include="Estilos\scss\mixins\_border-radius.scss" />
+    <Content Include="Estilos\scss\mixins\_box-shadow.scss" />
+    <Content Include="Estilos\scss\mixins\_breakpoints.scss" />
+    <Content Include="Estilos\scss\mixins\_buttons.scss" />
+    <Content Include="Estilos\scss\mixins\_caret.scss" />
+    <Content Include="Estilos\scss\mixins\_clearfix.scss" />
+    <Content Include="Estilos\scss\mixins\_float.scss" />
+    <Content Include="Estilos\scss\mixins\_forms.scss" />
+    <Content Include="Estilos\scss\mixins\_gradients.scss" />
+    <Content Include="Estilos\scss\mixins\_grid-framework.scss" />
+    <Content Include="Estilos\scss\mixins\_grid.scss" />
+    <Content Include="Estilos\scss\mixins\_hover.scss" />
+    <Content Include="Estilos\scss\mixins\_image.scss" />
+    <Content Include="Estilos\scss\mixins\_list-group.scss" />
+    <Content Include="Estilos\scss\mixins\_lists.scss" />
+    <Content Include="Estilos\scss\mixins\_nav-divider.scss" />
+    <Content Include="Estilos\scss\mixins\_navbar-align.scss" />
+    <Content Include="Estilos\scss\mixins\_pagination.scss" />
+    <Content Include="Estilos\scss\mixins\_reset-text.scss" />
+    <Content Include="Estilos\scss\mixins\_resize.scss" />
+    <Content Include="Estilos\scss\mixins\_screen-reader.scss" />
+    <Content Include="Estilos\scss\mixins\_size.scss" />
+    <Content Include="Estilos\scss\mixins\_table-row.scss" />
+    <Content Include="Estilos\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Estilos\scss\mixins\_text-hide.scss" />
+    <Content Include="Estilos\scss\mixins\_text-truncate.scss" />
+    <Content Include="Estilos\scss\mixins\_transition.scss" />
+    <Content Include="Estilos\scss\mixins\_visibility.scss" />
+    <Content Include="Estilos\scss\style.scss" />
+    <Content Include="Estilos\scss\utilities\_align.scss" />
+    <Content Include="Estilos\scss\utilities\_background.scss" />
+    <Content Include="Estilos\scss\utilities\_borders.scss" />
+    <Content Include="Estilos\scss\utilities\_clearfix.scss" />
+    <Content Include="Estilos\scss\utilities\_display.scss" />
+    <Content Include="Estilos\scss\utilities\_embed.scss" />
+    <Content Include="Estilos\scss\utilities\_flex.scss" />
+    <Content Include="Estilos\scss\utilities\_float.scss" />
+    <Content Include="Estilos\scss\utilities\_position.scss" />
+    <Content Include="Estilos\scss\utilities\_screenreaders.scss" />
+    <Content Include="Estilos\scss\utilities\_sizing.scss" />
+    <Content Include="Estilos\scss\utilities\_spacing.scss" />
+    <Content Include="Estilos\scss\utilities\_text.scss" />
+    <Content Include="Estilos\scss\utilities\_visibility.scss" />
+    <Content Include="Estilos\scss\_alert.scss" />
+    <Content Include="Estilos\scss\_badge.scss" />
+    <Content Include="Estilos\scss\_breadcrumb.scss" />
+    <Content Include="Estilos\scss\_button-group.scss" />
+    <Content Include="Estilos\scss\_buttons.scss" />
+    <Content Include="Estilos\scss\_card.scss" />
+    <Content Include="Estilos\scss\_carousel.scss" />
+    <Content Include="Estilos\scss\_close.scss" />
+    <Content Include="Estilos\scss\_code.scss" />
+    <Content Include="Estilos\scss\_custom-forms.scss" />
+    <Content Include="Estilos\scss\_custom.scss" />
+    <Content Include="Estilos\scss\_dropdown.scss" />
+    <Content Include="Estilos\scss\_forms.scss" />
+    <Content Include="Estilos\scss\_functions.scss" />
+    <Content Include="Estilos\scss\_grid.scss" />
+    <Content Include="Estilos\scss\_images.scss" />
+    <Content Include="Estilos\scss\_input-group.scss" />
+    <Content Include="Estilos\scss\_jumbotron.scss" />
+    <Content Include="Estilos\scss\_list-group.scss" />
+    <Content Include="Estilos\scss\_media.scss" />
+    <Content Include="Estilos\scss\_mixins.scss" />
+    <Content Include="Estilos\scss\_modal.scss" />
+    <Content Include="Estilos\scss\_nav.scss" />
+    <Content Include="Estilos\scss\_navbar.scss" />
+    <Content Include="Estilos\scss\_pagination.scss" />
+    <Content Include="Estilos\scss\_popover.scss" />
+    <Content Include="Estilos\scss\_print.scss" />
+    <Content Include="Estilos\scss\_progress.scss" />
+    <Content Include="Estilos\scss\_reboot.scss" />
+    <Content Include="Estilos\scss\_root.scss" />
+    <Content Include="Estilos\scss\_tables.scss" />
+    <Content Include="Estilos\scss\_tooltip.scss" />
+    <Content Include="Estilos\scss\_transitions.scss" />
+    <Content Include="Estilos\scss\_type.scss" />
+    <Content Include="Estilos\scss\_utilities.scss" />
+    <Content Include="Estilos\scss\_variables.scss" />
+    <Content Include="bin\PortafolioNet.Business.dll.config" />
+    <Content Include="bin\PortafolioNet.Data.dll.config" />
+    <Content Include="bin\PortafolioNet.View.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="indexLogin.aspx" />
+    <Content Include="Julio.aspx" />
+    <Content Include="Junio.aspx" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Logeado.Master" />
+    <Content Include="Normal.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -97,6 +246,7 @@
     <Content Include="fonts\elegant-theme-line.svg" />
     <Content Include="fonts\flexslider-icon.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HoraRegistrada.aspx" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\blank.gif" />
     <Content Include="images\fancybox_loading%402x.gif" />
@@ -129,16 +279,38 @@
     <Content Include="LoginClose.aspx" />
     <Content Include="PreguntaSecreta.aspx" />
     <Content Include="RestablecerContraseña.aspx" />
+    <Content Include="SeleccionServicio.aspx" />
     <Content Include="SituacionEconomica.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agosto.aspx.cs">
+      <DependentUpon>Agosto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agosto.aspx.designer.cs">
+      <DependentUpon>Agosto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CrearUsuario.aspx.cs">
       <DependentUpon>CrearUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CrearUsuario.aspx.designer.cs">
       <DependentUpon>CrearUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElegirHora.aspx.cs">
+      <DependentUpon>ElegirHora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElegirHora.aspx.designer.cs">
+      <DependentUpon>ElegirHora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HoraRegistrada.aspx.cs">
+      <DependentUpon>HoraRegistrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoraRegistrada.aspx.designer.cs">
+      <DependentUpon>HoraRegistrada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -147,12 +319,40 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="indexLogin.aspx.cs">
+      <DependentUpon>indexLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indexLogin.aspx.designer.cs">
+      <DependentUpon>indexLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InserteUsuario.aspx.cs">
       <DependentUpon>InserteUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InserteUsuario.aspx.designer.cs">
       <DependentUpon>InserteUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Julio.aspx.cs">
+      <DependentUpon>Julio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Julio.aspx.designer.cs">
+      <DependentUpon>Julio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Junio.aspx.cs">
+      <DependentUpon>Junio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Junio.aspx.designer.cs">
+      <DependentUpon>Junio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logeado.Master.cs">
+      <DependentUpon>Logeado.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logeado.Master.designer.cs">
+      <DependentUpon>Logeado.Master</DependentUpon>
     </Compile>
     <Compile Include="LoginClose.aspx.cs">
       <DependentUpon>LoginClose.aspx</DependentUpon>
@@ -161,6 +361,16 @@
     <Compile Include="LoginClose.aspx.designer.cs">
       <DependentUpon>LoginClose.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Normal.Master.cs">
+      <DependentUpon>Normal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Normal.Master.designer.cs">
+      <DependentUpon>Normal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="PreguntaSecreta.aspx.cs">
       <DependentUpon>PreguntaSecreta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +386,13 @@
     <Compile Include="RestablecerContraseña.aspx.designer.cs">
       <DependentUpon>RestablecerContraseña.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SeleccionServicio.aspx.cs">
+      <DependentUpon>SeleccionServicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeleccionServicio.aspx.designer.cs">
+      <DependentUpon>SeleccionServicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SituacionEconomica.aspx.cs">
       <DependentUpon>SituacionEconomica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +406,9 @@
       <Project>{fafc2687-a146-4cd8-ac7b-98906ea75a66}</Project>
       <Name>PortafolioNet.Business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
