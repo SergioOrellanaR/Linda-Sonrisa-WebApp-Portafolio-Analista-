@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Logeado.master.cs" Inherits="PortafolioNet.View.Logeado" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Odontologica Linda Sonrisa</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300, 400, 700" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="Estilos/css/bootstrap.css"/>
+    <link rel="stylesheet" href="Estilos/css/animate.css"/>
+    <link rel="stylesheet" href="Estilos/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="Estilos/css/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="Estilos/css/jquery.timepicker.css"/>
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"/>
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+ <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.php">Linda Sonrisa<span></span>  </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="indexLogin.aspx">Inicio</a>
+                </li>           
+                <li class="nav-item">
+                    <a class="nav-link" href="SeleccionServicio.aspx">Tomar Hora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SituacionEconomica.aspx">Situacion Socio Economica</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="LoginClose.aspx">Cerrar Sesion</a>
+                </li>
+                <!-- Pestañas propias de cada tipo de sesión -->
+            </ul>
+        </div>
+    </div>
+    </nav>
+    </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
