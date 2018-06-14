@@ -13,13 +13,22 @@ namespace PortafolioNet.View {
     public partial class SituacionEconomica {
         
         /// <summary>
-        /// Control FileUpload1.
+        /// Control AtUploader  .
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload AtUploader  ;
+        
+        /// <summary>
+        /// Control fileValidator.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator fileValidator;
         
         /// <summary>
         /// Control txtMessage.
@@ -47,15 +56,6 @@ namespace PortafolioNet.View {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnVolver;
-        
-        /// <summary>
-        /// Control fileValidator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator fileValidator;
         
         /// <summary>
         /// Control lblErrorText.

@@ -52,6 +52,9 @@
     <Compile Include="Day.cs" />
     <Compile Include="Hour.cs" />
     <Compile Include="MailSender.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecretQuestion.cs" />
     <Compile Include="User.cs" />
@@ -59,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +70,13 @@
       <Project>{07936040-8450-4803-a48b-a35e6442754c}</Project>
       <Name>PortafolioNet.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\PortafolioNet.Business.dll" />
+    <Content Include="bin\Debug\PortafolioNet.Business.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

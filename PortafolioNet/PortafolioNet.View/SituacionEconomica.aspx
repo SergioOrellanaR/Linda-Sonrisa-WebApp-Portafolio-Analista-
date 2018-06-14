@@ -15,7 +15,8 @@
               <div class="row">
                 <div class="col-md-8 form-group">
                   <label for="fadjuntar">Adjuntar:</label>
-                    <asp:FileUpload ID="FileUpload1" runat="server" class=" form-control-lg" />
+                    <asp:FileUpload ID="AtUploader  " runat="server" class=" form-control-lg" />
+                    <asp:CustomValidator ID="fileValidator" runat="server" ErrorMessage="" OnServerValidate="fileValidator_ServerValidate" ControlToValidate="AtUploader"></asp:CustomValidator>                
                 </div>
               </div>
               <div class="row">
@@ -31,7 +32,6 @@
                 <div class="col-md-6 form-group">
                     <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block submitBnt"  OnClick="submit_Click" />
                 </div>
-                 <asp:CustomValidator ID="fileValidator" runat="server" ErrorMessage="" OnServerValidate="fileValidator_ServerValidate" ControlToValidate="AtUploader"></asp:CustomValidator>
               </div>
               <asp:Label ID="lblErrorText" runat="server" Text=""></asp:Label>
           </div>

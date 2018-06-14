@@ -17,12 +17,9 @@ namespace PortafolioNet.View
                 //UpdateVisitNumber();
                 if (Session["ses"] != null)
                 {
-                    lblLogin.Text = "";
                     lblCredenciales.Text = "";
                     txUser.Visible = false;
                     txPass.Visible = false;
-                    lblCerrarSesion.Visible = true;
-                    lblSituacionEconomica.Visible = true;
                     User user = (User)Session["ses"];
                     lblUsernameWelcome.Text = user.Username;
                     lblEnterAsUser.Text = "Aquí podrás encontrar todo lo que necesitas "+ user.Username;
