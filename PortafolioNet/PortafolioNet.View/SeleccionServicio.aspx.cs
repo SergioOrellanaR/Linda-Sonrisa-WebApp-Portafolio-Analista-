@@ -24,7 +24,7 @@ namespace PortafolioNet.View
                 {
                     FunctionaryRut = service.RutFunctionary
                 };
-                Response.Redirect("Enero2018.aspx");
+                Response.Redirect("CalendarMonths.aspx");
             }
         }
 

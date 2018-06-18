@@ -81,7 +81,7 @@
     <Content Include="CrearUsuario.aspx" />
     <Content Include="ElegirHora.aspx" />
     <Content Include="emailExitoso.aspx" />
-    <Content Include="Enero2018.aspx" />
+    <Content Include="CalendarMonths.aspx" />
     <Content Include="Estilos\css\animate.css" />
     <Content Include="Estilos\css\bootstrap-datepicker.css" />
     <Content Include="Estilos\css\bootstrap.css" />
@@ -224,7 +224,6 @@
     <Content Include="bin\PortafolioNet.View.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="indexLogin.aspx" />
-    <Content Include="Julio.aspx" />
     <Content Include="Junio.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Logeado.Master" />
@@ -314,12 +313,12 @@
     <Compile Include="emailExitoso.aspx.designer.cs">
       <DependentUpon>emailExitoso.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Enero2018.aspx.cs">
-      <DependentUpon>Enero2018.aspx</DependentUpon>
+    <Compile Include="CalendarMonths.aspx.cs">
+      <DependentUpon>CalendarMonths.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Enero2018.aspx.designer.cs">
-      <DependentUpon>Enero2018.aspx</DependentUpon>
+    <Compile Include="CalendarMonths.aspx.designer.cs">
+      <DependentUpon>CalendarMonths.aspx</DependentUpon>
     </Compile>
     <Compile Include="HoraRegistrada.aspx.cs">
       <DependentUpon>HoraRegistrada.aspx</DependentUpon>
@@ -348,13 +347,6 @@
     </Compile>
     <Compile Include="InserteUsuario.aspx.designer.cs">
       <DependentUpon>InserteUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Julio.aspx.cs">
-      <DependentUpon>Julio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Julio.aspx.designer.cs">
-      <DependentUpon>Julio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Junio.aspx.cs">
       <DependentUpon>Junio.aspx</DependentUpon>

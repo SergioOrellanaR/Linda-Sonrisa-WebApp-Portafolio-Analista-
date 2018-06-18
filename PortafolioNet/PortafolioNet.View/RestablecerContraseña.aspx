@@ -14,21 +14,21 @@
               <div class="row">
                 <div class="col-md-10 form-group">
                   <label for="contraseña">Nueva contraseña: </label>
-                    <asp:TextBox class="form-control" ID="txtNuevaContraseña" runat="server" placeholder="Nueva Contraseña"></asp:TextBox>   
+                    <asp:TextBox class="form-control" ID="txtNuevaContraseña" type="password" runat="server" placeholder="Nueva Contraseña"></asp:TextBox>   
                 </div>
               </div>
               <br />
               <div class="row">
                 <div class="col-md-10 form-group">
                   <label for="respuesta2">Confirmar nueva contraseña: </label>
-                <asp:TextBox class="form-control" ID="txtConfirmarContraseña" type="text" runat="server" placeholder="Confirmar nueva contraseña"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtConfirmarContraseña" type="password" runat="server" placeholder="Confirmar nueva contraseña"></asp:TextBox>
                 </div>
               </div>
 
           </div>
                 <div class="row">
                     <div class="col-md-2 form-group">
-                        <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-primary btn-lg btn-block"   />
+                        <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-primary btn-lg btn-block" OnClick="btnConfirmar_Click"   />
                     </div>
                     <div class="col-md-2 form-group">
                         <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block"   />

@@ -9,7 +9,7 @@ using System.Globalization;
 
 namespace PortafolioNet.View
 {
-    public partial class Enero2018 : System.Web.UI.Page
+    public partial class CalendarMonths : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -191,14 +191,14 @@ namespace PortafolioNet.View
         {
             DateTime date = (DateTime)Session["DateLoader"];
             Session["DateLoader"] = date.AddMonths(1);
-            Response.Redirect("Enero2018.aspx");
+            Response.Redirect("CalendarMonths.aspx");
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
             DateTime date = (DateTime)Session["DateLoader"];
             Session["DateLoader"] = date.AddMonths(-1);
-            Response.Redirect("Enero2018.aspx");
+            Response.Redirect("CalendarMonths.aspx");
         }
     }
 }

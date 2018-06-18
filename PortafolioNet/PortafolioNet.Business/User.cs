@@ -96,5 +96,19 @@ namespace PortafolioNet.Business
             }
         }
 
+        public bool updatePassword()
+        {
+            try
+            {
+                Data.USUARIO user = Connection.LindaSonrisaDB.USUARIO.First(re => re.ID == Id);
+                user.CLAVE = Password;
+                Connection.LindaSonrisaDB.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

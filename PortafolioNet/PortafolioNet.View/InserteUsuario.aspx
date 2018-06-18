@@ -15,11 +15,13 @@
                 <div class="col-md-8 form-group">
                   <label for="usuario">Inserte Usuario:</label>
                 <asp:TextBox class="form-control" ID="txtUsuario" type="text" runat="server" placeholder="Ingrese su usuario"></asp:TextBox>
+                <br />
+                  <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Red"></asp:Label>
                 </div>
               </div>
                 <div class="row">
                     <div class="col-md-3 form-group">
-                        <asp:Button ID="BtnContinuar" runat="server" Text="Continuar" class="btn btn-primary btn-lg btn-block"   />
+                        <asp:Button ID="BtnContinuar" runat="server" Text="Continuar" class="btn btn-primary btn-lg btn-block" OnClick="BtnContinuar_Click"   />
                     </div>
                     <div class="col-md-3 form-group">
                         <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block"   />

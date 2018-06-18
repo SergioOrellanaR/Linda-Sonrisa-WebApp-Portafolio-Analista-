@@ -12,14 +12,9 @@
       <div class="container">
           <div class="col-md-8 mb-5 element-animate">
             <div class="row">
-                    <label for="motivo" class="col-lg-4 control-label">Pregunta Secreta: </label>
+                <asp:Label ID="lblQuestion" runat="server" Text=""></asp:Label>
                     <div class="col-lg-10">
-                        <asp:DropDownList class="form-control" ID="ddlCampus" runat="server">
-                             <asp:ListItem Value="">¿Cual es el nombre de tu primera mascota?</asp:ListItem>
-                             <asp:ListItem Value=""> </asp:ListItem>
-                             <asp:ListItem Value=""></asp:ListItem>
-                             <asp:ListItem Value=""></asp:ListItem>
-                        </asp:DropDownList>
+                        
                     </div>
                 </div>
               <br />
@@ -33,7 +28,7 @@
           </div>
                 <div class="row">
                     <div class="col-md-2 form-group">
-                        <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-primary btn-lg btn-block"   />
+                        <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" class="btn btn-primary btn-lg btn-block" OnClick="btnConfirmar_Click"   />
                     </div>
                     <div class="col-md-2 form-group">
                         <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block"   />
