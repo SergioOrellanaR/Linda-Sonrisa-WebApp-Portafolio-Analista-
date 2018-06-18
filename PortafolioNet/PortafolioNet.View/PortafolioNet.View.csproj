@@ -223,7 +223,6 @@
     <Content Include="bin\PortafolioNet.View.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="indexLogin.aspx" />
-    <Content Include="Junio.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Logeado.Master" />
     <Content Include="Normal.Master" />
@@ -339,13 +338,6 @@
     </Compile>
     <Compile Include="InserteUsuario.aspx.designer.cs">
       <DependentUpon>InserteUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Junio.aspx.cs">
-      <DependentUpon>Junio.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Junio.aspx.designer.cs">
-      <DependentUpon>Junio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logeado.Master.cs">
       <DependentUpon>Logeado.Master</DependentUpon>
