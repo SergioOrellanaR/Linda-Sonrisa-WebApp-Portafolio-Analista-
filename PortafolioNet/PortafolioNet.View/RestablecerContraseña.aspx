@@ -14,14 +14,16 @@
               <div class="row">
                 <div class="col-md-10 form-group">
                   <label for="contraseña">Nueva contraseña: </label>
-                    <asp:TextBox class="form-control" ID="txtNuevaContraseña" type="password" runat="server" placeholder="Nueva Contraseña"></asp:TextBox>   
+                    <asp:TextBox class="form-control" ID="txtNuevaContraseña" type="password" runat="server" placeholder="Nueva Contraseña" MaxLength="30"></asp:TextBox>   
                 </div>
               </div>
               <br />
               <div class="row">
                 <div class="col-md-10 form-group">
                   <label for="respuesta2">Confirmar nueva contraseña: </label>
-                <asp:TextBox class="form-control" ID="txtConfirmarContraseña" type="password" runat="server" placeholder="Confirmar nueva contraseña"></asp:TextBox>
+                <asp:TextBox class="form-control" ID="txtConfirmarContraseña" type="password" runat="server" placeholder="Confirmar nueva contraseña" MaxLength="30"></asp:TextBox>
+                    <br />
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas deben coincidir" ForeColor="Red" ControlToCompare="txtNuevaContraseña" ControlToValidate="txtConfirmarContraseña"></asp:CompareValidator>
                 </div>
               </div>
 

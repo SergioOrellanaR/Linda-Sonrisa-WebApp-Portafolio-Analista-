@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PortafolioNet.Business
 {
-    class Contact
+    public class Contact
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -33,6 +33,7 @@ namespace PortafolioNet.Business
             try
             {
                 Data.CONTACTO contact = new Data.CONTACTO();
+                contact.ID = LastId() + 1;
                 contact.NOMBRE = Name;
                 contact.CORREO = Email;
                 contact.TELEFONO = Cellphone;
@@ -44,6 +45,19 @@ namespace PortafolioNet.Business
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public int LastId() //Obtiene el ultimo ID
+        {
+            try
+            {
+                return (int)Connection.LindaSonrisaDB.CONTACTO.Max(contact => contact.ID);
+            }
+            catch (Exception e)
+            {
+                String val = e.Message;
+                return 0;
             }
         }
     }

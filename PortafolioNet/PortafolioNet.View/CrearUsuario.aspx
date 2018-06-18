@@ -13,9 +13,11 @@
           <div class="col-md-10 mb-5 element-animate">
               <div class="row">
                 <div class="col-md-8 form-group">
-                  <label for="Rut">Rut:</label>
+                  <label for="Rut">Rut (Con dígito verificador):</label>
                     <asp:TextBox class="form-control" ID="txtRut" type="text" runat="server" placeholder="Rut"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtRut" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtRut" ForeColor="Red"></asp:RequiredFieldValidator><br />
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="El rut ya existe" ForeColor="Red" ControlToValidate="txtRut" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator><br />
+                    <asp:CustomValidator ID="CustomValidator4" runat="server" ErrorMessage="Ingrese un rut válido" ForeColor="Red" ControlToValidate="txtRut" OnServerValidate="CustomValidator4_ServerValidate"></asp:CustomValidator>
                 </div>
               </div>
 
@@ -48,6 +50,7 @@
                   <label for="Username">Elija un nombre de usuario para iniciar sesión en nuestro portal:</label>
                     <asp:TextBox class="form-control" ID="txtUsername" type="text" runat="server" placeholder="Nombre de usuario"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br /><asp:CustomValidator ID="CustomValidator2" runat="server" ErrorMessage="El usuario ya existe" ForeColor="Red" ControlToValidate="txtUsername" OnServerValidate="CustomValidator2_ServerValidate"></asp:CustomValidator>
                 </div>
               </div>
 
@@ -63,7 +66,8 @@
                 <div class="col-md-8 form-group">
                   <label for="PasswordConfirm">Confirmar contraseña:</label>
                     <asp:TextBox class="form-control" ID="txtPasswordConfirm" type="password" runat="server" placeholder="Confirmar contraseña"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtPasswordConfirm" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtPasswordConfirm" ForeColor="Red"></asp:RequiredFieldValidator><br />
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Las contraseñas deben coincidir" ForeColor="Red" ControlToCompare="txtPassword" ControlToValidate="txtPasswordConfirm"></asp:CompareValidator>
                 </div>
               </div>
 
@@ -106,7 +110,7 @@
               <div class="row">
                 <div class="col-md-8 form-group">
                   <label for="Pnombre">Teléfono:</label>
-                    <asp:TextBox class="form-control" ID="txtPhone" type="number" runat="server" placeholder="Teléfono"></asp:TextBox>
+                    <asp:TextBox class="form-control" ID="txtPhone" type="number" runat="server" placeholder="Teléfono" MaxLength="9"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtPhone" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
               </div>
@@ -116,6 +120,7 @@
                   <label for="email">Email:</label>
                 <asp:TextBox class="form-control" ID="txtEmail" type="email" runat="server" placeholder="Ejemplo asd@gmail.com"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo requerido" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br /><asp:CustomValidator ID="CustomValidator3" runat="server" ErrorMessage="El email ingresado ya se encuentra registrado" ForeColor="Red" ControlToValidate="txtEmail" OnServerValidate="CustomValidator3_ServerValidate"></asp:CustomValidator>
                 </div>
               </div>
               <div class="row">

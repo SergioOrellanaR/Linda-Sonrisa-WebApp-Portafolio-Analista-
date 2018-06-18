@@ -124,5 +124,32 @@ namespace PortafolioNet.Business
                 return false;
             }
         }
+
+        public bool MailAlreadyExist()
+        {
+            try
+            {
+                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.First(re => re.EMAIL == Email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool RutAlreadyExist()
+        {
+            try
+            {
+                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.First(re => re.RUT == Rut);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

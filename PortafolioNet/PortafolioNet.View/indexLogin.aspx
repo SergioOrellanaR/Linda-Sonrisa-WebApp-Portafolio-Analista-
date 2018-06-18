@@ -237,11 +237,11 @@
       <div class="col-md-8 col-md-offset-2 conForm">
         <h5>Shoot An Email</h5>
         <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
-        <div id="message"></div>
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." >
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Project Details..."></textarea>
-            <asp:Button ID="BtnIngresar" runat="server" Text="Enviar" class="submitBnt"  />
+                <div id="message"></div>
+          <asp:TextBox ID="txtName" runat="server" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." maxlength="30"></asp:TextBox>
+          <asp:TextBox ID="txtEmail" runat="server" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." maxlength="30"></asp:TextBox>
+          <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" cols="30" rows="8" class="form-control form-control-lg" MaxLength="255" placeholder="Ingrese su comentario aquí..."></asp:TextBox>
+            <asp:Button ID="BtnIngresar" runat="server" Text="Enviar" class="submitBnt" OnClick="BtnIngresar_Click"  />
           <div id="simple-msg"></div>
       </div>
     </div>
@@ -270,6 +270,7 @@
             <li><a href="#">DMeme1</a></li>
             <li><a href="#">DMeme1 Media</a></li>
             <li><a href="#">DMeme1</a></li>
+            <li><asp:Label ID="lblVisitCounter" runat="server" Text=""></asp:Label></li>
           </ul>
           </p>
         </div>

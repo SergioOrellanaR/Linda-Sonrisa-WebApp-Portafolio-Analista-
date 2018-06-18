@@ -59,15 +59,74 @@ namespace PortafolioNet.View
                     if (client.Create())
                     {
                         Session["ses"] = client;
-                        Response.Redirect("index.aspx");
+                        Response.Redirect("indexLogin.aspx");
                     }
                 }
                 else
                 {
-                    Response.Redirect("Junio.aspx");
+                    Response.Redirect("Index.aspx");
                 }
 
             }
+        }
+
+        private int rutWithoutDV()
+        {
+            string rut = txtRut.Text.Replace("-", "").Replace(".", "").Replace(",", "");
+            string rutWithoutDV = rut.Substring(0, rut.Length - 1);
+            return int.Parse(rutWithoutDV);
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            Client client = new Client() { Rut = rutWithoutDV() };
+            args.IsValid = !client.RutAlreadyExist();
+        }
+
+        protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            User user = new User() { Username = txtUsername.Text };
+            args.IsValid = !user.UsernameAlreadyExist();
+        }
+
+        protected void CustomValidator3_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            Client client = new Client() { Email = txtEmail.Text };
+            args.IsValid = !client.MailAlreadyExist();
+        }
+
+        public bool isValidRut(string rut)
+        {
+            bool validacion = false;
+            try
+            {
+                rut = rut.ToUpper();
+                rut = rut.Replace(".", "");
+                rut = rut.Replace("-", "");
+                rut = rut.Replace(",", "");
+                int rutAux = int.Parse(rut.Substring(0, rut.Length - 1));
+
+                char dv = char.Parse(rut.Substring(rut.Length - 1, 1));
+
+                int m = 0, s = 1;
+                for (; rutAux != 0; rutAux /= 10)
+                {
+                    s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+                }
+                if (dv == (char)(s != 0 ? s + 47 : 75))
+                {
+                    validacion = true;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return validacion;
+        }
+
+        protected void CustomValidator4_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = isValidRut(txtRut.Text);
         }
     }
 }

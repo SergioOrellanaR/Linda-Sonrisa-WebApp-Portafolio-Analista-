@@ -14,7 +14,7 @@ namespace PortafolioNet.View
         {
             if (!IsPostBack)
             {
-                //UpdateVisitNumber();
+                UpdateVisitNumber();
                 if (Session["ses"] != null)
                 {
                     Response.Redirect("IndexLogin.aspx");
@@ -62,12 +62,30 @@ namespace PortafolioNet.View
             Response.Redirect("CrearUsuario.aspx");
         }
 
-        //public void UpdateVisitNumber()
-        //{
-        //    VisitNumber vn = new VisitNumber();
-        //    vn.Quantity += 1;
-        //    vn.Update();
-        //    lblVisitNumber.Text = vn.Quantity.ToString();
-        //}
+        protected void BtnIngresar_Click(object sender, EventArgs e)
+        {
+            Contact contact = new Contact()
+            {
+                Cellphone = "0",
+                Name = txtName.Text,
+                Email = txtEmail.Text,
+                Message = txtMessage.Text
+            };
+            contact.Create();
+        }
+
+        public void UpdateVisitNumber()
+        {
+            VisitNumber vn = new VisitNumber() { Id = 0};
+            vn.Read();
+            vn.Quantity++;
+            if (!vn.Update())
+            {
+                vn.Id = 0;
+                vn.Quantity = 0;
+                vn.Create();
+            }
+            lblVisitCounter.Text = vn.Quantity.ToString();
+        }
     }
 }

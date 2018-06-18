@@ -8,23 +8,35 @@ namespace PortafolioNet.Business
 {
     public class VisitNumber
     {
+        public int Id { get; set; }
         public int Quantity { get; set; }
 
         public VisitNumber()
         {
-            Quantity = (int) Connection.LindaSonrisaDB.VISITAS_WEB.First().CANTIDAD;
         }
 
-        public VisitNumber(int quantity)
+        public bool Create()
         {
-            Quantity = quantity;
+            try
+            {
+                Data.VISITAS_WEB visit = new Data.VISITAS_WEB();
+                visit.ID = Id;
+                visit.CANTIDAD = Quantity;
+                Connection.LindaSonrisaDB.VISITAS_WEB.Add(visit);
+                Connection.LindaSonrisaDB.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
-
         public bool Read()
         {
             try
             {
-                Data.VISITAS_WEB data = Connection.LindaSonrisaDB.VISITAS_WEB.First();
+                Data.VISITAS_WEB data = Connection.LindaSonrisaDB.VISITAS_WEB.First(re => re.ID == Id);
+                Id = (int)data.ID;
                 Quantity = (int) data.CANTIDAD;
                 return true;
             }

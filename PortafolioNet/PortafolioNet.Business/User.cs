@@ -110,5 +110,18 @@ namespace PortafolioNet.Business
                 return false;
             }
         }
+
+        public bool UsernameAlreadyExist()
+        {
+            try
+            {
+                Data.USUARIO user = Connection.LindaSonrisaDB.USUARIO.First(re => re.NOMBRE == Username);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
