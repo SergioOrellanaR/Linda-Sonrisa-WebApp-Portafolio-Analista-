@@ -19,7 +19,7 @@
                     <div class="col-md-1 form-group">
                         <asp:Button ID="btnBack" runat="server" Text="<" class="btn btn-secondary" OnClick="btnBack_Click" />
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="col-md-1 form-group">   
+                    <div class="col-md-2 form-group">   
                         <h2><asp:Label ID="lblMonth" runat="server" Text=""></asp:Label></h2>                 
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="col-md-2 form-group">
