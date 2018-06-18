@@ -13,6 +13,24 @@ namespace PortafolioNet.View {
     public partial class Junio {
         
         /// <summary>
+        /// Control btnBack.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
+        
+        /// <summary>
+        /// Control btnAdvance.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdvance;
+        
+        /// <summary>
         /// Control btnDia5.
         /// </summary>
         /// <remarks>

@@ -9,20 +9,23 @@
         </div>
     </div>
 
-    <section class="section">
+        <section class="section">
       <div class="container">
           <div class="col-md-10 mb-2 element-animate">
                 <div class="row">
                     <div class="col-md-4 form-group">                  
                     </div>
                     <div class="col-md-1 form-group">
-                        <a class="btn btn-secondary" href="Enero2018.aspx" role="button"><</a>
+                        <asp:Button ID="btnBack" runat="server" Text="<" class="btn btn-secondary"/>
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="col-md-3 form-group">
-                        <h2> Junio 2018 </h2>                   
+                    <div class="col-md-1 form-group">   
+                        <h2>Junio </h2>                 
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-md-2 form-group">
+                        <h2>2018</h2>                   
                     </div>
                     <div class="col-md-2 form-group">
-                        <a class="btn btn-secondary" href="Julio.aspx" role="button">></a>
+                        <asp:Button ID="btnAdvance" runat="server" Text=">" class="btn btn-secondary"/>
                     </div>
                 </div>
               </div>              
