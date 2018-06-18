@@ -11,7 +11,10 @@ namespace PortafolioNet.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["ses"]==null)
+            {
+                Response.Redirect("Index.aspx");
+            }
         }
     }
 }

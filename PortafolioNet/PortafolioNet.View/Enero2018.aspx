@@ -15,13 +15,15 @@
                     <div class="col-md-4 form-group">                  
                     </div>
                     <div class="col-md-1 form-group">
-                        <a class="btn btn-secondary" href="Agosto.aspx" role="button"><</a>
+                        
                     </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="col-md-3 form-group">
-                        <h2> Enero 2018 </h2>                   
+                        <asp:Button ID="btnBack" runat="server" Text="<" OnClick="btnBack_Click" />
+                        <h2><asp:Label ID="lblMonth" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                            <asp:Label ID="lblYear" runat="server" Text=""></asp:Label> 
+                            <asp:Button ID="btnAdvance" runat="server" Text=">" OnClick="btnAdvance_Click" /> </h2>                   
                     </div>
                     <div class="col-md-2 form-group">
-                        <a class="btn btn-secondary" href="Junio.aspx" role="button">></a>
                     </div>
                 </div>
               </div>              
@@ -84,10 +86,14 @@
             <td><asp:Button ID="Button29" runat="server" Text="29" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
             <td><asp:Button ID="Button30" runat="server" Text="30" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
             <td><asp:Button ID="Button31" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><asp:Button ID="Button32" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
+            <td><asp:Button ID="Button33" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
+            <td><asp:Button ID="Button34" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
+            <td><asp:Button ID="Button35" runat="server" Text="31" class="btn btn-primary btn-lg btn-block disabled" Enabled="false" OnClick="Button_Click"/></td>
+          </tr>
+          <tr>
+            <td><asp:Button ID="Button36" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
+            <td><asp:Button ID="Button37" runat="server" Text="31" class="btn btn-primary btn-lg btn-block" Enabled="false" OnClick="Button_Click"/></td>
           </tr>
         </tbody>
       </table>
