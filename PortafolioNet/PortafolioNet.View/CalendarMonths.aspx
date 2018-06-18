@@ -3,9 +3,14 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="jumbotron">
+     <div class="jumbotron">
         <div class="container">  
-          <h1>Toma de Hora</h1>
+            <div class="media">
+              <div class="media-body">
+                <h1 class="mt-0 mb-1">El servicio <asp:Label ID="lblService" runat="server" Text=""></asp:Label> es brindado por: <asp:Label ID="Label2" runat="server" Text=""></asp:Label> </h1>
+              </div>
+            <asp:Image ID="Image1" runat="server" src="images/team-2.jpg" CssClass="img-circle" Width="200" Height="200"/>
+            </div>
         </div>
     </div>
 
