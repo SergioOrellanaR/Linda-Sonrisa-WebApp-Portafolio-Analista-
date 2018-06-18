@@ -4,10 +4,10 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <a href="indexLogin.aspx" class="cta-link element-animate" data-animate-effect="fadeIn" data-target="#modalAppointment">
+
+    <a href="indexLogin.aspx" class="cta-link element-animate" data-animate-effect="fadeIn" data-target="#modalAppointment"></a>
       <label for="servicio" class="col-lg-10 control-label"><span class="sub-heading">El registro de su hora ha sido exitoso.</span></label>           
-    </a>
+    
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>

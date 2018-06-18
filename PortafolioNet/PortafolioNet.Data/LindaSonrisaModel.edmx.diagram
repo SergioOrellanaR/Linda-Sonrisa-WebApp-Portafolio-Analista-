@@ -51,6 +51,7 @@
         <AssociationConnector Association="LindaSonrisaModel.SYS_C007855" ManuallyRouted="false" />
         <AssociationConnector Association="LindaSonrisaModel.SYS_C007925" ManuallyRouted="false" />
         <AssociationConnector Association="LindaSonrisaModel.PERMISO_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="LindaSonrisaModel.RUT_FUNCIONARIO_FK" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

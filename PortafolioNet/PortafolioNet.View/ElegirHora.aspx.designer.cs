@@ -13,157 +13,157 @@ namespace PortafolioNet.View {
     public partial class ElegirHora {
         
         /// <summary>
-        /// Control Button1.
+        /// Control Button08300900.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Button08300900;
         
         /// <summary>
-        /// Control Button2.
+        /// Control Button09000930.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Button09000930;
         
         /// <summary>
-        /// Control Button6.
+        /// Control Button09301000.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button Button09301000;
         
         /// <summary>
-        /// Control Button3.
+        /// Control Button10001030.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button Button10001030;
         
         /// <summary>
-        /// Control Button4.
+        /// Control Button10301100.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button Button10301100;
         
         /// <summary>
-        /// Control Button5.
+        /// Control Button11001130.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button Button11001130;
         
         /// <summary>
-        /// Control Button7.
+        /// Control Button11301200.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button Button11301200;
         
         /// <summary>
-        /// Control Button8.
+        /// Control Button12001230.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button Button12001230;
         
         /// <summary>
-        /// Control Button20.
+        /// Control Button12301300.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button20;
+        protected global::System.Web.UI.WebControls.Button Button12301300;
         
         /// <summary>
-        /// Control Button21.
+        /// Control Button14001430.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button21;
+        protected global::System.Web.UI.WebControls.Button Button14001430;
         
         /// <summary>
-        /// Control Button22.
+        /// Control Button14301500.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button22;
+        protected global::System.Web.UI.WebControls.Button Button14301500;
         
         /// <summary>
-        /// Control Button9.
+        /// Control Button15001530.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button Button15001530;
         
         /// <summary>
-        /// Control Button10.
+        /// Control Button15301600.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button10;
+        protected global::System.Web.UI.WebControls.Button Button15301600;
         
         /// <summary>
-        /// Control Button11.
+        /// Control Button16001630.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button11;
+        protected global::System.Web.UI.WebControls.Button Button16001630;
         
         /// <summary>
-        /// Control Button12.
+        /// Control Button16301700.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button12;
+        protected global::System.Web.UI.WebControls.Button Button16301700;
         
         /// <summary>
-        /// Control Button13.
+        /// Control Button17001730.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button13;
+        protected global::System.Web.UI.WebControls.Button Button17001730;
         
         /// <summary>
-        /// Control Button14.
+        /// Control Button17301800.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button14;
+        protected global::System.Web.UI.WebControls.Button Button17301800;
         
         /// <summary>
         /// Control btnVolver.

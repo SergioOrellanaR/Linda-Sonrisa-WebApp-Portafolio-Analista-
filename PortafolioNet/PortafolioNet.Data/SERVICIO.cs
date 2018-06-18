@@ -22,7 +22,9 @@ namespace PortafolioNet.Data
         public decimal ID { get; set; }
         public string DESCRIPCION { get; set; }
         public decimal PRECIO { get; set; }
+        public Nullable<decimal> RUT_FUNCIONARIO { get; set; }
     
         public virtual ICollection<DETALLE_BOLETA_CLI> DETALLE_BOLETA_CLI { get; set; }
+        public virtual FUNCIONARIO FUNCIONARIO { get; set; }
     }
 }

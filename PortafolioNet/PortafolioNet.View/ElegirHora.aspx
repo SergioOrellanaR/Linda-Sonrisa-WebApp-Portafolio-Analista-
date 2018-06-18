@@ -24,39 +24,39 @@
                     <tbody>
                       <tr>
                         <td>8:30 - 9:00</td>
-                        <td><asp:Button ID="Button1" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button08300900" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>9:00 - 9:30</td>
-                        <td><asp:Button ID="Button2" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button09000930" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>9:30 - 10:00</td>
-                        <td><asp:Button ID="Button6" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button09301000" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>10:00 - 10:30</td>
-                        <td><asp:Button ID="Button3" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button10001030" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>10:30 - 11:00</td>
-                        <td><asp:Button ID="Button4" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button10301100" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>11:00 - 11:30</td>
-                        <td><asp:Button ID="Button5" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button11001130" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>11:30 - 12:00</td>
-                        <td><asp:Button ID="Button7" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button11301200" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>12:00 - 12:30</td>
-                        <td><asp:Button ID="Button8" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button12001230" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>12:30 - 13:00</td>
-                        <td><asp:Button ID="Button20" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button12301300" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                     </tbody>
                   </table>                 
@@ -72,35 +72,35 @@
                     <tbody>
                       <tr>
                         <td>14:00 - 14:30</td>
-                        <td><asp:Button ID="Button21" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button14001430" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>14:30 - 15:00</td>
-                        <td><asp:Button ID="Button22" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button14301500" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>15:00 - 15:30</td>
-                        <td><asp:Button ID="Button9" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button15001530" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>15:30 - 16:00</td>
-                        <td><asp:Button ID="Button10" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button15301600" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>16:00 - 16:30</td>
-                        <td><asp:Button ID="Button11" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button16001630" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>16:30 - 17:00</td>
-                        <td><asp:Button ID="Button12" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button16301700" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>17:00 - 17:30</td>
-                        <td><asp:Button ID="Button13" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button17001730" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                       <tr>
                         <td>17:30 - 18:00</td>
-                        <td><asp:Button ID="Button14" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block"/></td>
+                        <td><asp:Button ID="Button17301800" runat="server" Text="Solicitar" class="btn btn-primary btn-lg btn-block" OnClick="Button_Click"/></td>
                       </tr>
                     </tbody>
                   </table>     

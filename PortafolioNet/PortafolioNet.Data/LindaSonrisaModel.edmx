@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LindaSonrisaModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LindaSonrisaModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BOLETA_CLIENTE">
           <Key>
             <PropertyRef Name="ID" />
@@ -178,12 +178,6 @@ advertencia 6002: La tabla o vista 'U_PORTAFOLIO.PERMISO_USUARIO' no tiene defin
           <Property Name="ID_PROVEEDOR" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="ID_TIPOPRODUCTO" Type="number" Precision="38" Scale="0" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6013: La tabla o vista 'U_PORTAFOLIO.PROFESIONAL_SERVICIO' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
-        <EntityType Name="PROFESIONAL_SERVICIO">
-          <Property Name="ID_SERVICIO" Type="number" Precision="38" Scale="0" />
-          <Property Name="RUT_FUNCIONARIO" Type="number" Precision="38" Scale="0" />
-        </EntityType>-->
         <EntityType Name="PROVEEDOR">
           <Key>
             <PropertyRef Name="ID" />
@@ -213,6 +207,7 @@ advertencia 6013: La tabla o vista 'U_PORTAFOLIO.PROFESIONAL_SERVICIO' no tiene 
           <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="DESCRIPCION" Type="varchar2" MaxLength="255" Nullable="false" />
           <Property Name="PRECIO" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="RUT_FUNCIONARIO" Type="number" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="TIPO_ESTADO_PEDIDO">
           <Key>
@@ -240,7 +235,7 @@ advertencia 6013: La tabla o vista 'U_PORTAFOLIO.PROFESIONAL_SERVICIO' no tiene 
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="None" />
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar2" MaxLength="255" Nullable="false" />
           <Property Name="CLAVE" Type="varchar2" MaxLength="255" Nullable="false" />
           <Property Name="ID_PREGUNTA" Type="number" Precision="38" Scale="0" Nullable="false" />
@@ -253,6 +248,18 @@ advertencia 6013: La tabla o vista 'U_PORTAFOLIO.PROFESIONAL_SERVICIO' no tiene 
           <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="CANTIDAD" Type="number" Precision="38" Scale="0" Nullable="false" />
         </EntityType>
+        <Association Name="RUT_FUNCIONARIO_FK">
+          <End Role="FUNCIONARIO" Type="Self.FUNCIONARIO" Multiplicity="0..1" />
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="RUT" />
+            </Principal>
+            <Dependent Role="SERVICIO">
+              <PropertyRef Name="RUT_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="SYS_C007810">
           <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
           <End Role="COMUNA" Type="Self.COMUNA" Multiplicity="*" />
@@ -433,12 +440,6 @@ advertencia 6013: La tabla o vista 'U_PORTAFOLIO.PROFESIONAL_SERVICIO' no tiene 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'U_PORTAFOLIO.PROFESIONAL_SERVICIO', pero no se encuentra la tabla.
-        <Association Name="SYS_C007903" />-->
-        <!--Errores durante la generación:
-error 6004: Una relación hace referencia a la tabla 'U_PORTAFOLIO.PROFESIONAL_SERVICIO', pero no se encuentra la tabla.
-        <Association Name="SYS_C007904" />-->
         <Association Name="SYS_C007910">
           <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
           <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
@@ -572,6 +573,10 @@ FROM "U_PORTAFOLIO"."DETALLE_BOLETA_CLI" "DETALLE_BOLETA_CLI"</DefiningQuery>
 "PERMISO_USUARIO"."ID_PERMISO" AS "ID_PERMISO"
 FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="RUT_FUNCIONARIO_FK" Association="Self.RUT_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+          </AssociationSet>
           <AssociationSet Name="SYS_C007810" Association="Self.SYS_C007810">
             <End Role="CIUDAD" EntitySet="CIUDAD" />
             <End Role="COMUNA" EntitySet="COMUNA" />
@@ -665,8 +670,7 @@ FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
             <End Role="HIST_ATENCION" EntitySet="HIST_ATENCION" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LindaSonrisaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -777,6 +781,7 @@ FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
           <NavigationProperty Name="HORA" Relationship="Self.SYS_C007901" FromRole="FUNCIONARIO" ToRole="HORA" />
           <NavigationProperty Name="PEDIDO_A_BODEGA" Relationship="Self.SYS_C007932" FromRole="FUNCIONARIO" ToRole="PEDIDO_A_BODEGA" />
           <NavigationProperty Name="HIST_ATENCION" Relationship="Self.SYS_C007939" FromRole="FUNCIONARIO" ToRole="HIST_ATENCION" />
+          <NavigationProperty Name="SERVICIO" Relationship="LindaSonrisaModel.RUT_FUNCIONARIO_FK" FromRole="FUNCIONARIO" ToRole="SERVICIO" />
         </EntityType>
         <EntityType Name="HIST_ATENCION">
           <Key>
@@ -885,6 +890,8 @@ FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
           <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="PRECIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <NavigationProperty Name="DETALLE_BOLETA_CLI" Relationship="Self.SYS_C007925" FromRole="SERVICIO" ToRole="DETALLE_BOLETA_CLI" />
+          <Property Name="RUT_FUNCIONARIO" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="FUNCIONARIO" Relationship="LindaSonrisaModel.RUT_FUNCIONARIO_FK" FromRole="SERVICIO" ToRole="FUNCIONARIO" />
         </EntityType>
         <EntityType Name="TIPO_ESTADO_PEDIDO">
           <Key>
@@ -1313,7 +1320,23 @@ FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="PERMISO" EntitySet="PERMISO" />
           </AssociationSet>
+          <AssociationSet Name="RUT_FUNCIONARIO_FK" Association="LindaSonrisaModel.RUT_FUNCIONARIO_FK">
+            <End Role="FUNCIONARIO" EntitySet="FUNCIONARIO" />
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="RUT_FUNCIONARIO_FK">
+          <End Type="LindaSonrisaModel.FUNCIONARIO" Role="FUNCIONARIO" Multiplicity="0..1" />
+          <End Type="LindaSonrisaModel.SERVICIO" Role="SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCIONARIO">
+              <PropertyRef Name="RUT" />
+            </Principal>
+            <Dependent Role="SERVICIO">
+              <PropertyRef Name="RUT_FUNCIONARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1512,6 +1535,7 @@ FROM "U_PORTAFOLIO"."PERMISO_USUARIO" "PERMISO_USUARIO"</DefiningQuery>
           <EntitySetMapping Name="SERVICIO">
             <EntityTypeMapping TypeName="LindaSonrisaModel.SERVICIO">
               <MappingFragment StoreEntitySet="SERVICIO">
+                <ScalarProperty Name="RUT_FUNCIONARIO" ColumnName="RUT_FUNCIONARIO" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
                 <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />

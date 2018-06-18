@@ -80,6 +80,7 @@
     <Content Include="bin\PortafolioNet.View.pdb" />
     <Content Include="CrearUsuario.aspx" />
     <Content Include="ElegirHora.aspx" />
+    <Content Include="Enero2018.aspx" />
     <Content Include="Estilos\css\animate.css" />
     <Content Include="Estilos\css\bootstrap-datepicker.css" />
     <Content Include="Estilos\css\bootstrap.css" />
@@ -304,6 +305,13 @@
     </Compile>
     <Compile Include="ElegirHora.aspx.designer.cs">
       <DependentUpon>ElegirHora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Enero2018.aspx.cs">
+      <DependentUpon>Enero2018.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Enero2018.aspx.designer.cs">
+      <DependentUpon>Enero2018.aspx</DependentUpon>
     </Compile>
     <Compile Include="HoraRegistrada.aspx.cs">
       <DependentUpon>HoraRegistrada.aspx</DependentUpon>

@@ -13,13 +13,13 @@ namespace PortafolioNet.View {
     public partial class SeleccionServicio {
         
         /// <summary>
-        /// Control ddlCampus.
+        /// Control ddlService.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCampus;
+        protected global::System.Web.UI.WebControls.DropDownList ddlService;
         
         /// <summary>
         /// Control btnContinuar.

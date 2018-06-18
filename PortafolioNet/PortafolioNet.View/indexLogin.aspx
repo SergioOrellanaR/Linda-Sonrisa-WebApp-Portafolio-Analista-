@@ -29,7 +29,7 @@
         <ul class="primary-nav">
           <li><a href="#intro">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
-          <li><a href="#teams">Nuestro equipo</a></li>
+          <li><a href="SeleccionServicio.aspx">Tomar Hora</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
           <li><a href="SituacionEconomica.aspx">Situacion Socio Economica</a></li>
           <li><a href="LoginClose.aspx">Cerrar Sesion</a></li>

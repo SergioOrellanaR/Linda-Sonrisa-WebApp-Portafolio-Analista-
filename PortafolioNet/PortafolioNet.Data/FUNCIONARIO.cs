@@ -20,6 +20,7 @@ namespace PortafolioNet.Data
             this.HORA = new HashSet<HORA>();
             this.PEDIDO_A_BODEGA = new HashSet<PEDIDO_A_BODEGA>();
             this.HIST_ATENCION = new HashSet<HIST_ATENCION>();
+            this.SERVICIO = new HashSet<SERVICIO>();
         }
     
         public decimal RUT { get; set; }
@@ -44,5 +45,6 @@ namespace PortafolioNet.Data
         public virtual ICollection<HORA> HORA { get; set; }
         public virtual ICollection<PEDIDO_A_BODEGA> PEDIDO_A_BODEGA { get; set; }
         public virtual ICollection<HIST_ATENCION> HIST_ATENCION { get; set; }
+        public virtual ICollection<SERVICIO> SERVICIO { get; set; }
     }
 }

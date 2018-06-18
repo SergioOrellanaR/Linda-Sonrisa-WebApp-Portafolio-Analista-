@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PortafolioNet.Business
 {
-    class Hour
+    public class Hour
     {
         
 
