@@ -12,13 +12,13 @@ namespace PortafolioNet.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class ORDEN_PEDIDO
+    public partial class DETALLE_BOLETA_CLI
     {
-        public string ID { get; set; }
-        public decimal CANTIDAD { get; set; }
-        public decimal ESTADO { get; set; }
-        public decimal ID_PRODUCTO { get; set; }
+        public decimal ID_BOLETA_CLI { get; set; }
+        public decimal ID_SERVICIO { get; set; }
+        public decimal VALOR { get; set; }
     
-        public virtual PRODUCTO PRODUCTO { get; set; }
+        public virtual BOLETA_CLIENTE BOLETA_CLIENTE { get; set; }
+        public virtual SERVICIO SERVICIO { get; set; }
     }
 }

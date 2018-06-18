@@ -16,13 +16,13 @@ namespace PortafolioNet.Data
     {
         public SERVICIO()
         {
-            this.BOLETA_CLIENTE = new HashSet<BOLETA_CLIENTE>();
+            this.DETALLE_BOLETA_CLI = new HashSet<DETALLE_BOLETA_CLI>();
         }
     
         public decimal ID { get; set; }
         public string DESCRIPCION { get; set; }
         public decimal PRECIO { get; set; }
     
-        public virtual ICollection<BOLETA_CLIENTE> BOLETA_CLIENTE { get; set; }
+        public virtual ICollection<DETALLE_BOLETA_CLI> DETALLE_BOLETA_CLI { get; set; }
     }
 }

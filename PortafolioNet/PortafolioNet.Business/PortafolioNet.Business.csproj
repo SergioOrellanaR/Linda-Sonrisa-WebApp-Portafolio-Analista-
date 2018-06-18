@@ -66,17 +66,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PortafolioNet.Data\PortafolioNet.Data.csproj">
-      <Project>{07936040-8450-4803-a48b-a35e6442754c}</Project>
-      <Name>PortafolioNet.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="bin\Debug\PortafolioNet.Business.dll" />
     <Content Include="bin\Debug\PortafolioNet.Business.pdb" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortafolioNet.Data\PortafolioNet.Data.csproj">
+      <Project>{6d4eff3a-ea39-4dea-bd11-cebc796b214a}</Project>
+      <Name>PortafolioNet.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

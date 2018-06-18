@@ -16,7 +16,8 @@ namespace PortafolioNet.Data
     {
         public USUARIO()
         {
-            this.PERSONA = new HashSet<PERSONA>();
+            this.CLIENTE = new HashSet<CLIENTE>();
+            this.FUNCIONARIO = new HashSet<FUNCIONARIO>();
             this.PERMISO = new HashSet<PERMISO>();
         }
     
@@ -26,7 +27,8 @@ namespace PortafolioNet.Data
         public decimal ID_PREGUNTA { get; set; }
         public string RESP_PREGUNTA { get; set; }
     
-        public virtual ICollection<PERSONA> PERSONA { get; set; }
+        public virtual ICollection<CLIENTE> CLIENTE { get; set; }
+        public virtual ICollection<FUNCIONARIO> FUNCIONARIO { get; set; }
         public virtual PREGUNTA_SECRETA PREGUNTA_SECRETA { get; set; }
         public virtual ICollection<PERMISO> PERMISO { get; set; }
     }

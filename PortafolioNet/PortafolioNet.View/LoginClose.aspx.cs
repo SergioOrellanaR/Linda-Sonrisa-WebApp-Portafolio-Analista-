@@ -15,15 +15,18 @@ namespace PortafolioNet.View
         {
             if (Session["ses"] != null)
             {
-                User usr = (User)Session["ses"];
-                lblName.Text = usr.Username;
+                Client client = (Client)Session["ses"];
+                lblName.Text = client.FirstName + " " + client.FirstLastName;
+                Session["ses"] = null;
             }
-            
+            else
+            {
+                Response.Redirect("Index.aspx");
+            }
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            Session["ses"] = null;
             Response.Redirect("Index.aspx");
         }
     }

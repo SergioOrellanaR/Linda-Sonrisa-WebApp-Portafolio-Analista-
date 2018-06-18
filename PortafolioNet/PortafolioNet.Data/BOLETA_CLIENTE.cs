@@ -16,7 +16,7 @@ namespace PortafolioNet.Data
     {
         public BOLETA_CLIENTE()
         {
-            this.SERVICIO = new HashSet<SERVICIO>();
+            this.DETALLE_BOLETA_CLI = new HashSet<DETALLE_BOLETA_CLI>();
         }
     
         public decimal ID { get; set; }
@@ -24,6 +24,6 @@ namespace PortafolioNet.Data
         public decimal RUT_CLIENTE { get; set; }
     
         public virtual CLIENTE CLIENTE { get; set; }
-        public virtual ICollection<SERVICIO> SERVICIO { get; set; }
+        public virtual ICollection<DETALLE_BOLETA_CLI> DETALLE_BOLETA_CLI { get; set; }
     }
 }

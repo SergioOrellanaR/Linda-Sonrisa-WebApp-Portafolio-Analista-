@@ -14,6 +14,7 @@ namespace PortafolioNet.Data
     
     public partial class VISITAS_WEB
     {
+        public decimal ID { get; set; }
         public decimal CANTIDAD { get; set; }
     }
 }

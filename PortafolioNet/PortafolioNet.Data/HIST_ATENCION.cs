@@ -12,13 +12,15 @@ namespace PortafolioNet.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class ORDEN_PEDIDO
+    public partial class HIST_ATENCION
     {
-        public string ID { get; set; }
-        public decimal CANTIDAD { get; set; }
-        public decimal ESTADO { get; set; }
-        public decimal ID_PRODUCTO { get; set; }
+        public decimal ID { get; set; }
+        public string DESCRIPCION { get; set; }
+        public System.DateTime FECHA { get; set; }
+        public decimal RUT_FUNCIONARIO { get; set; }
+        public decimal RUT_CLIENTE { get; set; }
     
-        public virtual PRODUCTO PRODUCTO { get; set; }
+        public virtual CLIENTE CLIENTE { get; set; }
+        public virtual FUNCIONARIO FUNCIONARIO { get; set; }
     }
 }

@@ -18,16 +18,31 @@ namespace PortafolioNet.Data
         {
             this.DIA = new HashSet<DIA>();
             this.HORA = new HashSet<HORA>();
-            this.ORDEN_PEDIDO = new HashSet<ORDEN_PEDIDO>();
+            this.PEDIDO_A_BODEGA = new HashSet<PEDIDO_A_BODEGA>();
+            this.HIST_ATENCION = new HashSet<HIST_ATENCION>();
         }
     
         public decimal RUT { get; set; }
+        public string DV { get; set; }
+        public string P_NOMBRE { get; set; }
+        public string S_NOMBRE { get; set; }
+        public string P_APELLIDO { get; set; }
+        public string S_APELLIDO { get; set; }
+        public System.DateTime FECHA_NAC { get; set; }
+        public string SEXO { get; set; }
+        public string DIRECCION { get; set; }
+        public decimal TELEFONO { get; set; }
+        public string EMAIL { get; set; }
+        public decimal ID_COMUNA { get; set; }
+        public decimal ID_USUARIO { get; set; }
         public decimal ID_TIPO { get; set; }
     
+        public virtual COMUNA COMUNA { get; set; }
         public virtual ICollection<DIA> DIA { get; set; }
-        public virtual PERSONA PERSONA { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
         public virtual TIPO_FUNCIONARIO TIPO_FUNCIONARIO { get; set; }
         public virtual ICollection<HORA> HORA { get; set; }
-        public virtual ICollection<ORDEN_PEDIDO> ORDEN_PEDIDO { get; set; }
+        public virtual ICollection<PEDIDO_A_BODEGA> PEDIDO_A_BODEGA { get; set; }
+        public virtual ICollection<HIST_ATENCION> HIST_ATENCION { get; set; }
     }
 }

@@ -45,7 +45,7 @@
         <h1> <asp:Label ID="lblCredenciales" runat="server" Text=""></asp:Label>  </h1>
           <br />
           <br />
-        <h1>Bienvenido a Odontologica "Linda Sonrisa" <asp:Label ID="lblUsernameWelcome" runat="server" Text=""></asp:Label></h1>
+        <h1>Bienvenido <asp:Label ID="lblUsernameWelcome" runat="server" Text=""></asp:Label></h1>
         <p>Somos una institución de salud que entrega a sus pacientes la confianza y el profesionalismo de su personal en la resolución de los problemas bucales con la calidad, eficiencia y eficacia que ellos merecen.</p>
         <a href="#" class="btn btn-large">Find out more</a> </div>
       <!-- banner text --> 

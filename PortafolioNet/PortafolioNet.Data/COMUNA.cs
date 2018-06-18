@@ -16,7 +16,8 @@ namespace PortafolioNet.Data
     {
         public COMUNA()
         {
-            this.PERSONA = new HashSet<PERSONA>();
+            this.CLIENTE = new HashSet<CLIENTE>();
+            this.FUNCIONARIO = new HashSet<FUNCIONARIO>();
         }
     
         public decimal ID { get; set; }
@@ -24,6 +25,7 @@ namespace PortafolioNet.Data
         public decimal ID_CIUDAD { get; set; }
     
         public virtual CIUDAD CIUDAD { get; set; }
-        public virtual ICollection<PERSONA> PERSONA { get; set; }
+        public virtual ICollection<CLIENTE> CLIENTE { get; set; }
+        public virtual ICollection<FUNCIONARIO> FUNCIONARIO { get; set; }
     }
 }

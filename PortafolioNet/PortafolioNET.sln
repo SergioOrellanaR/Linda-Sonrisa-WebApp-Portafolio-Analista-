@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortafolioNet.View", "Porta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortafolioTest", "PortafolioTest\PortafolioTest.csproj", "{C93AFCF3-A0BE-4399-92AC-82F8543FB288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortafolioNet.Data", "PortafolioNet.Data\PortafolioNet.Data.csproj", "{07936040-8450-4803-A48B-A35E6442754C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortafolioNet.Data", "PortafolioNet.Data\PortafolioNet.Data.csproj", "{6D4EFF3A-EA39-4DEA-BD11-CEBC796B214A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{C93AFCF3-A0BE-4399-92AC-82F8543FB288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C93AFCF3-A0BE-4399-92AC-82F8543FB288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C93AFCF3-A0BE-4399-92AC-82F8543FB288}.Release|Any CPU.Build.0 = Release|Any CPU
-		{07936040-8450-4803-A48B-A35E6442754C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07936040-8450-4803-A48B-A35E6442754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07936040-8450-4803-A48B-A35E6442754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07936040-8450-4803-A48B-A35E6442754C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4EFF3A-EA39-4DEA-BD11-CEBC796B214A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4EFF3A-EA39-4DEA-BD11-CEBC796B214A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4EFF3A-EA39-4DEA-BD11-CEBC796B214A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4EFF3A-EA39-4DEA-BD11-CEBC796B214A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

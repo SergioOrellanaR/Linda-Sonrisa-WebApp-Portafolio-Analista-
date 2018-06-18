@@ -22,14 +22,14 @@ namespace PortafolioNet.View
             lblErrorText.Text = "";
             if (Page.IsValid && AtUploader.HasFile)
             {
-                User usr = (User)Session["ses"];
+                Client client = (Client)Session["ses"];
                 //creamos nuestra lista de archivos a enviar
                 List<string> lstArchivos = new List<string>();
                 Attachment at = new Attachment(AtUploader.PostedFile.InputStream, AtUploader.FileName);
-
+                String title = "Situación socioeconómica de: " + client.FirstName + " " + client.FirstLastName + " (" + client.Rut + ")";
                 //creamos nuestro objeto de la clase que hicimos
                 MailSender oMail = new MailSender("lindasonrisawebpage@gmail.com", "odontologicalindasonrisa@gmail.com", txtMessage.Text
-                                    , "Situación socioeconómica de: " + usr.Username, at);
+                                    ,title, at);
                 //y enviamos
                 if (oMail.enviaMail())
                 {

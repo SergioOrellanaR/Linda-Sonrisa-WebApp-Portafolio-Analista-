@@ -18,13 +18,28 @@ namespace PortafolioNet.Data
         {
             this.BOLETA_CLIENTE = new HashSet<BOLETA_CLIENTE>();
             this.HORA = new HashSet<HORA>();
+            this.HIST_ATENCION = new HashSet<HIST_ATENCION>();
         }
     
         public decimal RUT { get; set; }
+        public string DV { get; set; }
+        public string P_NOMBRE { get; set; }
+        public string S_NOMBRE { get; set; }
+        public string P_APELLIDO { get; set; }
+        public string S_APELLIDO { get; set; }
+        public System.DateTime FECHA_NAC { get; set; }
+        public string SEXO { get; set; }
+        public string DIRECCION { get; set; }
+        public decimal TELEFONO { get; set; }
+        public string EMAIL { get; set; }
+        public decimal ID_COMUNA { get; set; }
+        public decimal ID_USUARIO { get; set; }
         public decimal VULNERABLE { get; set; }
     
         public virtual ICollection<BOLETA_CLIENTE> BOLETA_CLIENTE { get; set; }
-        public virtual PERSONA PERSONA { get; set; }
+        public virtual COMUNA COMUNA { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
         public virtual ICollection<HORA> HORA { get; set; }
+        public virtual ICollection<HIST_ATENCION> HIST_ATENCION { get; set; }
     }
 }

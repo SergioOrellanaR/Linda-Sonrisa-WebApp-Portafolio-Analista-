@@ -17,14 +17,7 @@ namespace PortafolioNet.View
                 //UpdateVisitNumber();
                 if (Session["ses"] != null)
                 {
-                    lblCredenciales.Text = "";
-                    txUser.Visible = false;
-                    txPass.Visible = false;
-                    User user = (User)Session["ses"];
-                    lblUsernameWelcome.Text = user.Username;
-                    lblEnterAsUser.Text = "Aquí podrás encontrar todo lo que necesitas "+ user.Username;
-                    lblErrorMessage.Text = "";
-                    submit.Visible = false;
+                    Response.Redirect("IndexLogin.aspx");
                 }
             }
             
@@ -32,16 +25,20 @@ namespace PortafolioNet.View
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            User user = new User()
+            Client client = new Client()
             {
-                Username = txUser.Text,
-                Password = txPass.Text
+                User = new Business.User()
+                {
+                    Username = txUser.Text,
+                    Password = txPass.Text
+                }
             };
 
-            if (user.Authenticate() == true)
+            if (client.User.Authenticate() == true)
             {
-                Session["ses"] = user;
-                Response.Redirect("Index.aspx");
+                client.Read();
+                Session["ses"] = client;
+                Response.Redirect("indexLogin.aspx");
             }
             else
             {

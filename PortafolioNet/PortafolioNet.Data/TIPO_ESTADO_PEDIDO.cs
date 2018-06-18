@@ -14,14 +14,7 @@ namespace PortafolioNet.Data
     
     public partial class TIPO_ESTADO_PEDIDO
     {
-        public TIPO_ESTADO_PEDIDO()
-        {
-            this.ORDEN_PEDIDO = new HashSet<ORDEN_PEDIDO>();
-        }
-    
         public decimal ID { get; set; }
         public string DESCRIPCION { get; set; }
-    
-        public virtual ICollection<ORDEN_PEDIDO> ORDEN_PEDIDO { get; set; }
     }
 }
