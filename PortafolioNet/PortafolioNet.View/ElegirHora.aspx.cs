@@ -17,6 +17,10 @@ namespace PortafolioNet.View
                 ScheduleHourController scheduleHourController = (ScheduleHourController)Session["ScheduleHour"];
                 setUnavailableHours(scheduleHourController.getUnavailableHours());
             }
+            else
+            {
+                Response.Redirect("indexLogin.aspx");
+            }
         }
 
         protected void Button_Click(object sender, EventArgs e)

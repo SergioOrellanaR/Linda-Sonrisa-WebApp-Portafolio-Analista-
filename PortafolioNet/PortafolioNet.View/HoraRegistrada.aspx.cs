@@ -11,7 +11,7 @@ namespace PortafolioNet.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["ScheduleHour"] = null;
         }
     }
 }

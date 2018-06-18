@@ -20,6 +20,10 @@ namespace PortafolioNet.View
                 LoadAvailableDays (scheduleHourController.getFunctionaryAvailableDays());
                 saveScheduleHour(scheduleHourController);
             }
+            else
+            {
+                Response.Redirect("indexLogin.aspx");
+            }
         }
 
         protected void Button_Click(object sender, EventArgs e)
