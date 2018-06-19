@@ -33,7 +33,7 @@ namespace PortafolioNet.Business
             try
             {
                 Data.HORA hour = new Data.HORA();
-                hour.ID = LastId() + 1;
+                hour.ID = SequencerController.GetNextVal("SEQ_ID_HORA");
                 hour.FECHA_HORA = DateHour;
                 hour.RUT_FUNCIONARIO = RutFunctionary;
                 hour.RUT_CLIENTE = RutClient;
@@ -95,18 +95,5 @@ namespace PortafolioNet.Business
                 return false;
             }
         }
-
-        public int LastId() //Obtiene el ultimo ID
-        {
-            try
-            {
-                return (int)Connection.LindaSonrisaDB.HORA.Max(re => re.ID);
-            }
-            catch (Exception)
-            {
-                return 0;
-            }
-        }
-
     }
 }

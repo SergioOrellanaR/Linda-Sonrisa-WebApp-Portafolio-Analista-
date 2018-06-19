@@ -12,6 +12,9 @@ namespace PortafolioNet.Data
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class LindaSonrisaEntities : DbContext
     {
@@ -49,5 +52,14 @@ namespace PortafolioNet.Data
         public DbSet<USUARIO> USUARIO { get; set; }
         public DbSet<VISITAS_WEB> VISITAS_WEB { get; set; }
         public DbSet<DETALLE_BOLETA_CLI> DETALLE_BOLETA_CLI { get; set; }
+    
+        public virtual int cont(Nullable<decimal> oUT)
+        {
+            var oUTParameter = oUT.HasValue ?
+                new ObjectParameter("OUT", oUT) :
+                new ObjectParameter("OUT", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("cont", oUTParameter);
+        }
     }
 }
