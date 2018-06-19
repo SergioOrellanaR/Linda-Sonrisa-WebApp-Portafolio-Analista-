@@ -24,7 +24,7 @@
 <!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="Index.aspx">LINDA SONRISA</a>
+    <div class="header-content clearfix"> <a class="logo" href="indexLogin.aspx"><img src="images/Logo.png" width="400" height="80"/></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="#intro">Nosotros</a></li>

@@ -8,19 +8,19 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Odontologica Linda Sonrisa</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/flexslider.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/font-icon.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/flexslider.css"/>
+<link rel="stylesheet" href="css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/responsive.css"/>
+<link rel="stylesheet" href="css/font-icon.css"/>
+<link rel="stylesheet" href="css/animate.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
 </head>
 <body>
     <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="Index.aspx">LINDA SONRISA</a>
+    <div class="header-content clearfix"> <a class="logo" href="Index.aspx"><img src="images/Logo.png" width="400" height="80"/></a>
       <nav class="navigation" role="navigation">
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
