@@ -32,6 +32,10 @@ namespace PortafolioNet.View
                 lblYear.Text = dateLoader.Year.ToString();
 
                 ScheduleHourController scheduleHourController = (ScheduleHourController)Session["ScheduleHour"];
+                string functionaryName = scheduleHourController.FunctionaryName;
+                lblService.Text = scheduleHourController.ServiceName;
+                Label2.Text = functionaryName;
+                Image2.ImageUrl = "~/images/"+ functionaryName+".jpg";
                 scheduleHourController.Month = dateLoader.Month;
                 scheduleHourController.Year = dateLoader.Year;
                 LoadAvailableDays (scheduleHourController.getFunctionaryAvailableDays());

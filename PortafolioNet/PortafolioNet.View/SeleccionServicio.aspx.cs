@@ -20,11 +20,13 @@ namespace PortafolioNet.View
             Service service = new Service() { Id = int.Parse(ddlService.SelectedValue) };
             if (service.Read())
             {
-                Session["ScheduleHour"] = new ScheduleHourController()
+                ScheduleHourController schec = new ScheduleHourController()
                 {
                     FunctionaryRut = service.RutFunctionary,
                     ServiceName = service.Description
                 };
+                schec.FunctionaryNameByRut(schec.FunctionaryRut);
+                Session["ScheduleHour"] = schec;
                 Response.Redirect("CalendarMonths.aspx");
             }
         }

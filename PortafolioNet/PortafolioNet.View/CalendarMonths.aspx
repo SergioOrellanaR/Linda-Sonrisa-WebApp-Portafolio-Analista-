@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Logeado.Master" AutoEventWireup="true" CodeBehind="CalendarMonths.aspx.cs" Inherits="PortafolioNet.View.CalendarMonths" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+    <link href="Estilos/css/bootstrap.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="jumbotron">
@@ -9,7 +9,7 @@
               <div class="media-body">
                 <h1 class="mt-0 mb-1">El servicio <asp:Label ID="lblService" runat="server" Text=""></asp:Label> es brindado por: <asp:Label ID="Label2" runat="server" Text=""></asp:Label> </h1>
               </div>
-            <asp:Image ID="Image1" runat="server" src="images/team-2.jpg" CssClass="img-circle" Width="200" Height="200"/>
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/images/team-3.jpg" Width ="150px" Height="150px"/>
             </div>
         </div>
     </div>
