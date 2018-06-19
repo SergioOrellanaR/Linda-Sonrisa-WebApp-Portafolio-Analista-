@@ -66,7 +66,12 @@ namespace PortafolioNet.View
                         int buttonDay = int.Parse(button.ID.Replace("Button", ""));
                         if (buttonDay == day)
                         {
+                            //button.CssClass = "btn btn-primary btn-lg btn-block";
                             button.Enabled = true;
+                        }
+                        else
+                        {
+                            //button.CssClass = "btn btn-secondary btn - lg btn - block";
                         }
                     }
                 }

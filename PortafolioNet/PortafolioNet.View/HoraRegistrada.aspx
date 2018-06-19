@@ -5,10 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <a href="indexLogin.aspx" class="cta-link element-animate" data-animate-effect="fadeIn" data-target="#modalAppointment">
-        <label for="servicio" class="col-lg-10 control-label"><span class="sub-heading">El registro de su hora ha sido exitoso.</span></label>
-    </a>
-                 
-    
+        <label for="servicio" class="col-lg-10 control-label"><span class="sub-heading">Estimado/a
+            <asp:Label ID="lblClientName" runat="server" Text="Label"></asp:Label> su cita para el servicio de 
+            <asp:Label ID="lblService" runat="server" Text="Label"></asp:Label> ha sido agendada para el día
+            <asp:Label ID="lblFechaCita" runat="server" Text="Label"></asp:Label> con el odontólogo
+            <asp:Label ID="lblOdontologo" runat="server" Text="Label"></asp:Label>
+            </span></label>
+    </a>    
 
     <script src="Estilos/js/jquery-3.2.1.min.js"></script>
     <script src="Estilos/js/popper.min.js"></script>

@@ -22,7 +22,8 @@ namespace PortafolioNet.View
             {
                 Session["ScheduleHour"] = new ScheduleHourController()
                 {
-                    FunctionaryRut = service.RutFunctionary
+                    FunctionaryRut = service.RutFunctionary,
+                    ServiceName = service.Description
                 };
                 Response.Redirect("CalendarMonths.aspx");
             }

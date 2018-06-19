@@ -12,6 +12,10 @@ namespace PortafolioNet.Business
         public int Month { get; set; }
         public int Year { get; set; }
         public int FunctionaryRut { get; set; }
+        public string FunctionaryName { get; set; }
+        public string ServiceName { get; set; }
+        public DateTime TakenHour { get; set; }
+
 
         public ScheduleHourController()
         {
@@ -47,6 +51,32 @@ namespace PortafolioNet.Business
             return unavailableHours;
         }
 
+        public bool FunctionaryNameByRut (int rut)
+        {
+            try
+            {
+                Data.FUNCIONARIO func = Connection.LindaSonrisaDB.FUNCIONARIO.First(fun => fun.RUT == rut);
+                FunctionaryName = func.P_NOMBRE + " " + func.P_APELLIDO;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
+        public bool ServiceNameById (int Id)
+        {
+            try
+            {
+                Data.SERVICIO service = Connection.LindaSonrisaDB.SERVICIO.First(serv => serv.ID == Id);
+                ServiceName = service.DESCRIPCION;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

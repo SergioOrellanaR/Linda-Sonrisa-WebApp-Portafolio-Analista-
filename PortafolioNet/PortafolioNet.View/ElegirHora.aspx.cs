@@ -47,6 +47,9 @@ namespace PortafolioNet.View
             };
             if (hour.Create())
             {
+                scheduleHourController.FunctionaryNameByRut(hour.RutFunctionary);
+                scheduleHourController.TakenHour = startHour;
+                Session["ScheduleHour"] = scheduleHourController;
                 Response.Redirect("HoraRegistrada.aspx");
             }
             else
