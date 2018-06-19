@@ -24,7 +24,7 @@
 <!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="indexLogin.aspx"><img src="images/Logo.png" width="350" height="80"/></a>
+    <div class="header-content clearfix"> <a class="logo" href="indexLogin.aspx"><img src="images/Logo.png" width="300" height="80"/></a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="#intro">Nosotros</a></li>
@@ -47,7 +47,6 @@
           <br />
         <h1>Bienvenido <asp:Label ID="lblUsernameWelcome" runat="server" Text=""></asp:Label></h1>
         <p>Somos una institución de salud que entrega a sus pacientes la confianza y el profesionalismo de su personal en la resolución de los problemas bucales con la calidad, eficiencia y eficacia que ellos merecen.</p>
-        <a href="#" class="btn btn-large">Find out more</a> </div>
       <!-- banner text --> 
     </div>
   </div>
@@ -265,11 +264,11 @@
           <h5>Servicios memeros</h5>
           <p>
           <ul>
-            <li><a href="#services">DMeme1</a></li>
-            <li><a href="#">DMeme1</a></li>
-            <li><a href="#">DMeme1</a></li>
-            <li><a href="#">DMeme1 Media</a></li>
-            <li><a href="#">DMeme1</a></li>
+            <li><a href="#">Odontopediatría</a></li>
+            <li><a href="#">Radiografias</a></li>
+            <li><a href="#">Rehabilitación Oral</a></li>
+            <li><a href="#">Estética Dental</a></li>
+            <li><a href="#">Limpieza Dental</a></li>
             <li><asp:Label ID="lblVisitCounter" runat="server" Text=""></asp:Label></li>
           </ul>
           </p>
