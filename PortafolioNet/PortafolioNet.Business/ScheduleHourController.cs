@@ -51,6 +51,19 @@ namespace PortafolioNet.Business
             return unavailableHours;
         }
 
+        public bool DayHaveAvailableHours(DateTime time)
+        {
+            List<DateTime> unavailableHours = new List<DateTime>();
+            foreach (Data.HORA element in Connection.LindaSonrisaDB.HORA)
+            {
+                if (element.FECHA_HORA.Day == time.Day && element.FECHA_HORA.Month == time.Month && element.FECHA_HORA.Year == time.Year && element.RUT_FUNCIONARIO == FunctionaryRut)
+                {
+                    unavailableHours.Add(element.FECHA_HORA);
+                }
+            }
+            return unavailableHours.Count < 17;
+        }
+
         public bool FunctionaryNameByRut (int rut)
         {
             try

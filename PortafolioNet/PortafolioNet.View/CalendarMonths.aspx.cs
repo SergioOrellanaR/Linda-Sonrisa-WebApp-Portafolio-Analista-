@@ -38,7 +38,7 @@ namespace PortafolioNet.View
                 Image2.ImageUrl = "~/images/"+ functionaryName+".jpg";
                 scheduleHourController.Month = dateLoader.Month;
                 scheduleHourController.Year = dateLoader.Year;
-                LoadAvailableDays (scheduleHourController.getFunctionaryAvailableDays());
+                LoadAvailableDays (scheduleHourController.getFunctionaryAvailableDays(), scheduleHourController);
                 saveScheduleHour(scheduleHourController);
             }
             else
@@ -58,7 +58,7 @@ namespace PortafolioNet.View
             Response.Redirect("ElegirHora.aspx");
         }
 
-        private void LoadAvailableDays(List<int> availableDays)
+        private void LoadAvailableDays(List<int> availableDays, ScheduleHourController schedule)
         {
             ContentPlaceHolder contentPlaceHolder = (ContentPlaceHolder)Master.FindControl("ContentPlaceHolder1");
             foreach (int day in availableDays)
@@ -70,8 +70,12 @@ namespace PortafolioNet.View
                         int buttonDay = int.Parse(button.ID.Replace("Button", ""));
                         if (buttonDay == day)
                         {
+                            DateTime AvailablityDay = new DateTime(schedule.Year , schedule.Month, day);
+                            if (schedule.DayHaveAvailableHours(AvailablityDay))
+                            {
+                                button.Enabled = true;
+                            }
                             //button.CssClass = "btn btn-primary btn-lg btn-block";
-                            button.Enabled = true;
                         }
                         else
                         {
