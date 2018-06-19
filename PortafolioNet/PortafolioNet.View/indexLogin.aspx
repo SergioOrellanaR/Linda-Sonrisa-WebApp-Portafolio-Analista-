@@ -17,6 +17,12 @@
 <link rel="stylesheet" href="css/font-icon.css">
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
 </head>
 
 <body>
@@ -149,9 +155,9 @@
      <div class="col-md-3 col-sm-6">
       </div>
       <div class="col-md-3 col-sm-6">
-        <div class="person"> <img src="images/team-2.jpg" alt="" class="img-responsive">
+        <div class="person"> <img src="images/Luis Jara.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Luis Deo</h4>
+            <h4>Luis Jara</h4>
             <h5 class="role">Odontologo</h5>
             <p>Profesional titulado de Odontologia de la Pontifice Universidad Catolica de Chile</p>
           </div>
@@ -165,9 +171,9 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
-        <div class="person"> <img src="images/team-3.jpg" alt="" class="img-responsive">
+        <div class="person"> <img src="images/Marco Medina.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Marco </h4>
+            <h4>Marco Medina</h4>
             <h5 class="role">Odontologo</h5>
             <p>Profesional titulado de Odontologia de la Pontifice Universidad Catolica de Chile</p>
           </div>
@@ -234,11 +240,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 conForm">
-        <h5>Shoot An Email</h5>
-        <p>We are happy to talk you through any projects or run live demos for those wishing to see what it is to use our products and how they look like.</p>
+        <h5>Envianos tus comentarios</h5>
+        <p>Envianos tus comentarios, estos seran recibidos y considerados de buena manera para asi poder crecer juntos.</p>
                 <div id="message"></div>
-          <asp:TextBox ID="txtName" runat="server" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your name..." maxlength="30"></asp:TextBox>
-          <asp:TextBox ID="txtEmail" runat="server" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email Address..." maxlength="30"></asp:TextBox>
+          <asp:TextBox ID="txtName" runat="server" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Tu nombre..." maxlength="30"></asp:TextBox>
+          <asp:TextBox ID="txtEmail" runat="server" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email..." maxlength="30"></asp:TextBox>
           <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" cols="30" rows="8" class="form-control form-control-lg" MaxLength="255" placeholder="Ingrese su comentario aquí..."></asp:TextBox>
             <asp:Button ID="BtnIngresar" runat="server" Text="Enviar" class="submitBnt" OnClick="BtnIngresar_Click"  />
           <div id="simple-msg"></div>
@@ -247,14 +253,34 @@
   </div>
 </section>
 <!-- contact section --> 
-
+<section class="section">
+  <div class="container-fluid">
+      <div id="map"></div>
+    <script>
+      function initMap() {
+          var uluru = { lat: -33.511107, lng:-70.752497};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlFEYoggiDC7PX31zg0_OuitgAaTT3c2s&callback=initMap">
+    </script>
+  </div>
+</section>
 <!-- Footer section -->
 <footer class="footer">
   <div class="footer-top section">
     <div class="container">
       <div class="row">
         <div class="footer-col col-md-6">
-          <h5>Our Office Location</h5>
+          <h5>Ubicación de nuestra Clinica</h5>
           <p>Esquina Blanca #501, Maipú, Region Metropolitana.<br>
             23168407 / 995285476<br>
             lindasonrisawebpage@gmail.cl</p>
