@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="Estilos/css/bootstrap-datepicker.css"/>
     <link rel="stylesheet" href="Estilos/css/jquery.timepicker.css"/>
 
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css"/>
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"/>
+    <link rel="stylesheet" href="Estilos/fonts/ionicons/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="Estilos/fonts/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="Estilos/fonts/flaticon/font/flaticon.css"/>
 
 
     <!-- Theme Style -->
