@@ -33,7 +33,7 @@ namespace PortafolioNet.View
                 //y enviamos
                 if (oMail.enviaMail())
                 {
-                    lblErrorText.Text = "Email enviado con éxito";
+                    Response.Redirect("emailExitoso.aspx");
                 }
                 else
                 {

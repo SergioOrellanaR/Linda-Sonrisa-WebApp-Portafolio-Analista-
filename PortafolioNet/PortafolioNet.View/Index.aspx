@@ -322,7 +322,7 @@
             <li><a href="#">Rehabilitación Oral</a></li>
             <li><a href="#">Estética Dental</a></li>
             <li><a href="#">Limpieza Dental</a></li>
-            <li><asp:Label ID="lblVisitCounter" runat="server" Text=""></asp:Label></li>
+             <li>Usted es la visita número: <asp:Label ID="lblVisitCounter" runat="server" Text=""></asp:Label></li>
           </ul>
           </p>
         </div>
