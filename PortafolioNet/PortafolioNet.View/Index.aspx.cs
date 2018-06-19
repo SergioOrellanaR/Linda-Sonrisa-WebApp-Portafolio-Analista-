@@ -54,7 +54,7 @@ namespace PortafolioNet.View
 
         protected void ValidatePassword_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            args.IsValid = args.Value.Length > 5 && args.Value.Length < 19;
+            args.IsValid = args.Value.Length > 3 && args.Value.Length < 19;
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)

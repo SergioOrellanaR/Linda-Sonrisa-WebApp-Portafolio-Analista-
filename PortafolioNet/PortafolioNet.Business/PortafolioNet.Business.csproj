@@ -58,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScheduleHourController.cs" />
     <Compile Include="SecretQuestion.cs" />
+    <Compile Include="SequencerController.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VisitNumber.cs" />

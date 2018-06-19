@@ -34,7 +34,7 @@ namespace PortafolioNet.Business
             try
             {
                 Data.USUARIO account = new Data.USUARIO();
-                account.ID = LastId() + 1;
+                account.ID = SequencerController.GetNextVal("SEQ_ID_USUARIO");
                 account.NOMBRE = Username;
                 account.CLAVE = Password;
                 account.ID_PREGUNTA = IdSecretQuestion;
@@ -80,19 +80,6 @@ namespace PortafolioNet.Business
             {
                 String val = e.Message;
                 return false;
-            }
-        }
-
-       public int LastId() //Obtiene el ultimo ID
-       {
-            try
-            {
-                return (int) Connection.LindaSonrisaDB.USUARIO.Max(user => user.ID);
-            }
-            catch (Exception e)
-            {
-                String val = e.Message;
-                return 0;
             }
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using PortafolioNet.Data;
 namespace PortafolioNet.Business
 {
     public class Contact
@@ -33,7 +33,7 @@ namespace PortafolioNet.Business
             try
             {
                 Data.CONTACTO contact = new Data.CONTACTO();
-                contact.ID = LastId() + 1;
+                contact.ID = SequencerController.GetNextVal("SEQ_ID_CONTACTO");
                 contact.NOMBRE = Name;
                 contact.CORREO = Email;
                 contact.TELEFONO = Cellphone;
@@ -42,22 +42,10 @@ namespace PortafolioNet.Business
                 Connection.LindaSonrisaDB.SaveChanges();
                 return true;
             }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public int LastId() //Obtiene el ultimo ID
-        {
-            try
-            {
-                return (int)Connection.LindaSonrisaDB.CONTACTO.Max(contact => contact.ID);
-            }
             catch (Exception e)
             {
                 String val = e.Message;
-                return 0;
+                return false;
             }
         }
     }

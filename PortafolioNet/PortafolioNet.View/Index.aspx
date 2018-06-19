@@ -245,7 +245,7 @@
               <asp:TextBox ID="txUser" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" type="text" placeholder="Usuario" runat="server"></asp:TextBox><br />
           <asp:CustomValidator ID="ValidateUser" runat="server" ErrorMessage="El largo de nombre de usuario debe contener entre 6 y 18 carateres" ForeColor="Red" ControlToValidate="txUser" OnServerValidate="ValidateUser_ServerValidate"></asp:CustomValidator><br />
               <asp:TextBox ID="txPass" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" type="password" placeholder="Contraseña" runat="server"></asp:TextBox> <br />
-          <asp:CustomValidator ID="ValidatePassword" runat="server" ErrorMessage="El largo de la contraseña debe contener entre 6 y 18 carateres" ForeColor="Red" ControlToValidate="txPass" OnServerValidate="ValidatePassword_ServerValidate"></asp:CustomValidator><br />
+          <asp:CustomValidator ID="ValidatePassword" runat="server" ErrorMessage="El largo de la contraseña debe contener entre 4 y 18 carateres" ForeColor="Red" ControlToValidate="txPass" OnServerValidate="ValidatePassword_ServerValidate"></asp:CustomValidator><br />
               <a href="InserteUsuario.aspx" style="left">¿Olvido su contraseña?</a><br />
               <asp:Button ID="submit" runat="server" Text="Ingresar" class="submitBnt" OnClick="submit_Click"   />
               <asp:Button ID="btnRegister" runat="server" Text="Registrarme" class="submitBnt" OnClick="btnRegister_Click"   />
