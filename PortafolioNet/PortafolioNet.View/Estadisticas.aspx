@@ -26,14 +26,16 @@
 <body>
     <form id="form1" runat="server">
         <div>
-
-
-            
-            
-
     <div class="jumbotron">
         <div class="container">  
-          <h1>Reporte estadistico</h1>
+                <div class="row">
+                    <div class="col-md-8 form-group">
+                        <h1>Reporte estadistico</h1>
+                    </div>&nbsp;&nbsp;
+                    <div class="col-md-3 form-group">   
+                        <img  src="images/Logo.png" width="400" height="80"/>
+                    </div>
+                </div>
         </div>
     </div>
     <section class="section">
