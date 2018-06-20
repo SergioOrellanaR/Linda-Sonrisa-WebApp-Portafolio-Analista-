@@ -71,6 +71,8 @@ namespace PortafolioNet.View
                         if (buttonStartTime.Equals(startTime))
                         {
                             button.Enabled = false;
+                            button.CssClass = "btn btn-danger btn-lg btn-block";
+                            button.Text = "No disponible";
                         }
                     }
                 }
@@ -79,7 +81,7 @@ namespace PortafolioNet.View
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CalendarMonths");
+            Response.Redirect("CalendarMonths.aspx");
         }
     }
 }

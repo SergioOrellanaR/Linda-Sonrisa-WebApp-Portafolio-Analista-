@@ -78,9 +78,6 @@ namespace PortafolioNet.View
             try
             {
                 FileStream fs = new FileStream(pdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
-
-
-
                 Document document = new Document();
                 document.SetPageSize(PageSize.A4);
                 PdfWriter writer = PdfWriter.GetInstance(document, fs);

@@ -74,8 +74,8 @@ namespace PortafolioNet.View
                             if (schedule.DayHaveAvailableHours(AvailablityDay))
                             {
                                 button.Enabled = true;
+                                button.CssClass = "btn btn-primary btn-lg btn-block";
                             }
-                            //button.CssClass = "btn btn-primary btn-lg btn-block";
                         }
                         else
                         {
