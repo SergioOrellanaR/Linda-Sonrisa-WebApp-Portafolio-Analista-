@@ -82,5 +82,10 @@ namespace PortafolioNet.View
             }
             args.IsValid = isFileValid;
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("indexLogin.aspx");
+        }
     }
 }

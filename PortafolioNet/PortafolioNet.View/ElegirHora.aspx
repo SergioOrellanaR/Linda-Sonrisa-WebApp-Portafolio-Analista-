@@ -105,7 +105,7 @@
                     </tbody>
                   </table>     
                     <div class="col-md-12 form-group">
-                        <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-primary btn-lg btn-block"   />
+                        <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-primary btn-lg btn-block" OnClick="btnVolver_Click"   />
                     </div>                               
                     </div>
                 </div>

@@ -28,5 +28,10 @@ namespace PortafolioNet.View
                 lblMessage.Text = "Verifique que el usuario ingresado sea correcto";
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Index.aspx");
+        }
     }
 }

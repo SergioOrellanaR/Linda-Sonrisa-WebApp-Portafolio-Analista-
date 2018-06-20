@@ -223,6 +223,8 @@
     <Content Include="bin\PortafolioNet.View.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="images\Logo.png" />
+    <Content Include="images\Luis Jara.jpg" />
+    <Content Include="images\Marco Molina.jpg" />
     <Content Include="indexLogin.aspx" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Logeado.Master" />
@@ -255,8 +257,6 @@
     <Content Include="images\fancybox_sprite%402x.png" />
     <Content Include="images\fancybox_sprite.png" />
     <Content Include="images\logo-fixed.png" />
-    <Content Include="images\Luis Jara.jpg" />
-    <Content Include="images\Marco Medina.jpg" />
     <Content Include="images\work-1.jpg" />
     <Content Include="images\work-2.jpg" />
     <Content Include="images\work-3.jpg" />

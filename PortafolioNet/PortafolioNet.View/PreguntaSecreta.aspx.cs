@@ -35,5 +35,10 @@ namespace PortafolioNet.View
                 Response.Redirect("InserteUsuario.aspx");
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Index.aspx");
+        }
     }
 }
