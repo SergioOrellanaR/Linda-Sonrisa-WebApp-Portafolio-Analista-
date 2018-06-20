@@ -282,6 +282,10 @@
 <!-- contact section --> 
 <section class="section">
   <div class="container-fluid">
+      <div class="col-md-8 col-md-offset-2 conForm">
+        <h5>Estamos ubicados en:</h5>
+      </div>
+      </br>
       <div id="map"></div>
     <script>
       function initMap() {
