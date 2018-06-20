@@ -81,6 +81,7 @@
     <Content Include="ElegirHora.aspx" />
     <Content Include="emailExitoso.aspx" />
     <Content Include="CalendarMonths.aspx" />
+    <Content Include="Estadisticas.aspx" />
     <Content Include="Estilos\css\animate.css" />
     <Content Include="Estilos\css\bootstrap-datepicker.css" />
     <Content Include="Estilos\css\bootstrap.css" />
@@ -310,6 +311,13 @@
     </Compile>
     <Compile Include="CalendarMonths.aspx.designer.cs">
       <DependentUpon>CalendarMonths.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas.aspx.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.aspx.designer.cs">
+      <DependentUpon>Estadisticas.aspx</DependentUpon>
     </Compile>
     <Compile Include="HoraRegistrada.aspx.cs">
       <DependentUpon>HoraRegistrada.aspx</DependentUpon>

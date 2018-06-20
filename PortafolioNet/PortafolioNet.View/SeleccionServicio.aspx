@@ -34,7 +34,7 @@
                         <asp:Button ID="btnContinuar" runat="server" Text="Continuar" class="btn btn-primary btn-lg btn-block" OnClick="btnContinuar_Click"   />
                     </div>
                     <div class="col-md-2 form-group">
-                        <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block"   />
+                        <asp:Button ID="btnVolver" runat="server" Text="Volver" class="btn btn-primary btn-lg btn-block" OnClick="btnVolver_Click"   />
                     </div>
                 </div>
               </div>              

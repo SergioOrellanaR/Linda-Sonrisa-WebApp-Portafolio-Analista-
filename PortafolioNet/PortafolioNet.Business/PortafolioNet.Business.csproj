@@ -60,6 +60,7 @@
     <Compile Include="SecretQuestion.cs" />
     <Compile Include="SequencerController.cs" />
     <Compile Include="Service.cs" />
+    <Compile Include="Statistics.cs" />
     <Compile Include="User.cs" />
     <Compile Include="VisitNumber.cs" />
   </ItemGroup>
