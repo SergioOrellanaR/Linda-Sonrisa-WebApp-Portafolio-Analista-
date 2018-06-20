@@ -67,6 +67,23 @@ namespace PortafolioNet.Business
             }
         }
 
+        public bool ReadById()
+        {
+            try
+            {
+                Data.USUARIO account = Connection.LindaSonrisaDB.USUARIO.First(user => user.ID == Id);
+                Username = account.NOMBRE;
+                Password = account.CLAVE;
+                IdSecretQuestion = (int)account.ID_PREGUNTA;
+                AnswerSecretQuestion = account.RESP_PREGUNTA;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public bool Authenticate()
         {
             try

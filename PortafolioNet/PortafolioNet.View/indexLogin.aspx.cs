@@ -16,7 +16,15 @@ namespace PortafolioNet.View
             if (Session["ses"] != null)
             {
                 Client client = (Client)Session["ses"];
-                lblUsernameWelcome.Text = client.FirstName + " " + client.FirstLastName;
+                client.User.ReadById();
+                if (client.User.Username.Equals("Estadisticas"))
+                {
+                    Response.Redirect("Estadisticas.aspx");
+                }
+                else
+                {
+                    lblUsernameWelcome.Text = client.FirstName + " " + client.FirstLastName;
+                }
             }
             else
             {

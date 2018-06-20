@@ -63,7 +63,9 @@
              </br>
             <p class="mb-0"><asp:Label ID="lblMostOlderClient" runat="server" Text=""></asp:Label></p>  
              </br>
-            <p class="mb-0"><asp:Label ID="lblMostYoungerClient" runat="server" Text=""></asp:Label></p>                                                                                                     
+            <p class="mb-0"><asp:Label ID="lblMostYoungerClient" runat="server" Text=""></asp:Label></p> 
+            </br>
+            <p class="mb-0"><asp:Label ID="lblVisitNumber" runat="server" Text=""></asp:Label></p>
         </div>
       </div>
     </section> 
@@ -73,10 +75,10 @@
             <div class="col-md-8 mb-2 element-animate">
                 <div class="row">
                     <div class="col-md-3 form-group">
-                        <asp:Button ID="btnGeneratePDF" runat="server" Text="Generar PDF" CssClass="btn btn-primary btn-lg btn-block" />
+                        <asp:Button ID="btnGeneratePDF" runat="server" Text="Generar PDF" CssClass="btn btn-primary btn-lg btn-block" OnClick="btnGeneratePDF_Click" />
                     </div>&nbsp;&nbsp;
                     <div class="col-md-3 form-group">   
-                        <asp:Button ID="btnClose" runat="server" Text="Volver" CssClass="btn btn-primary btn-lg btn-block"  />
+                        <asp:Button ID="btnClose" runat="server" Text="Volver" CssClass="btn btn-primary btn-lg btn-block" OnClick="btnClose_Click"  />
                     </div>
                 </div>
               </div>              

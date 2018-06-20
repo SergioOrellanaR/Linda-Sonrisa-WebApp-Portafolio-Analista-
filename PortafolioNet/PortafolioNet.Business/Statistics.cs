@@ -19,6 +19,7 @@ namespace PortafolioNet.Business
         public string AverageClientAge { get; set; }
         public string MostOlderClient { get; set; }
         public string MostYoungerClient { get; set; }
+        public string VisitNumber { get; set; }
 
         public Statistics()
         {
@@ -28,7 +29,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                DentistWithMoreHours = "";
+                DentistWithMoreHours = "No existe información disponible para conocer el dentista con más horas registradas.";
             }
 
             if (mostSolicitedService() != null)
@@ -37,7 +38,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                MostSolicitedService = "";
+                MostSolicitedService = "No existe información disponible para conocer el servicio más solicitado.";
             }
 
             if (clientWithMoreHours() != null)
@@ -46,7 +47,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                ClientWithMoreHours = "";
+                ClientWithMoreHours = "No existe información disponible para conocer el cliente con más horas.";
             }
 
             if (mostSolicitedDay() != null)
@@ -55,7 +56,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                MostSolicitedDay = "";
+                MostSolicitedDay = "No existe información disponible para conocer el día con más solicitudes.";
             }
 
             if (lessSolicitedService() != null)
@@ -64,7 +65,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                LessSolicitedService = "";
+                LessSolicitedService = "No existe información disponible para conocer el servicio menos solicitado.";
             }
 
             if (dentistWithLessHours() != null)
@@ -73,7 +74,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                DentistWithLessHours = "";
+                DentistWithLessHours = "No existe información disponible para conocer el dentista con menos horas.";
             }
 
             if (mostClientCommune() != null)
@@ -82,7 +83,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                MostClientCommune = "";
+                MostClientCommune = "No existe información disponible para conocer la comuna con más clientes.";
             }
 
             if (clientRegisteredQuantity() != 0)
@@ -91,7 +92,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                ClientRegisteredQuantity = "";
+                ClientRegisteredQuantity = "No existe información disponible para conocer la cantidad de clientes registrados.";
             }
 
             if (averageClientAge() != 0)
@@ -100,7 +101,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                AverageClientAge = "";
+                AverageClientAge = "No existe información disponible para conocer el promedio de edad de los clientes.";
             }
 
             if (mostOlderClient() != null)
@@ -109,7 +110,7 @@ namespace PortafolioNet.Business
             }
             else
             {
-                MostOlderClient = "";
+                MostOlderClient = "No existe información disponible para conocer el cliente de mayor edad.";
             }
 
             if (mostYoungerClient() != null)
@@ -118,8 +119,10 @@ namespace PortafolioNet.Business
             }
             else
             {
-                MostYoungerClient = "";
+                MostYoungerClient = "No existe información disponible para conocer el cliente más joven.";
             }
+
+            VisitNumber = "La cantidad total de visitas que registra la página es de: " + visitNumber();
         }
 
         public string dentistWithMoreHours()
@@ -151,7 +154,7 @@ namespace PortafolioNet.Business
             try
             {
                 int maxNumberOfService = 0;
-                string maxServiceName = "";
+                string maxServiceName = null;
                 List<Data.SERVICIO> list = Connection.LindaSonrisaDB.SERVICIO.ToList();
                 foreach (Data.SERVICIO service in list)
                 {
@@ -320,9 +323,8 @@ namespace PortafolioNet.Business
         {
             try
             {
-                DateTime minDate = Connection.LindaSonrisaDB.CLIENTE.Min().FECHA_NAC;
-                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.First(result => result.FECHA_NAC == minDate);
-                string mostOlderClientName = client.P_NOMBRE + " " + client.P_APELLIDO + " con " + (DateTime.Now.Year - minDate.Year) + " años.";
+                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.OrderBy(cv => cv.FECHA_NAC).First();
+                string mostOlderClientName = client.P_NOMBRE + " " + client.P_APELLIDO + " con " + calculatedYears(client.FECHA_NAC) + " años.";
                 return mostOlderClientName;
             }
             catch (Exception e)
@@ -335,10 +337,9 @@ namespace PortafolioNet.Business
         {
             try
             {
-                DateTime maxDate = Connection.LindaSonrisaDB.CLIENTE.Max().FECHA_NAC;
-                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.First(result => result.FECHA_NAC == maxDate);
-                string mostOlderClientName = client.P_NOMBRE + " " + client.P_APELLIDO + " con " + (DateTime.Now.Year - maxDate.Year) + " años.";
-                return mostOlderClientName;
+                Data.CLIENTE client = Connection.LindaSonrisaDB.CLIENTE.OrderByDescending(cv => cv.FECHA_NAC).First();
+                string mostYoungerClientName = client.P_NOMBRE + " " + client.P_APELLIDO + " con " + calculatedYears(client.FECHA_NAC) + " años.";
+                return mostYoungerClientName;
             }
             catch (Exception e)
             {
@@ -354,7 +355,7 @@ namespace PortafolioNet.Business
                 List<Data.CLIENTE> clientList = Connection.LindaSonrisaDB.CLIENTE.ToList();
                 foreach (Data.CLIENTE client in clientList)
                 {
-                    agesList.Add(DateTime.Now.Year - client.FECHA_NAC.Year);
+                    agesList.Add(calculatedYears(client.FECHA_NAC));
                 }
                 return agesList;
             }
@@ -362,6 +363,26 @@ namespace PortafolioNet.Business
             {
                 return agesList;
             }
+        }
+
+        private int visitNumber()
+        {
+            try
+            {
+                Data.VISITAS_WEB visits = Connection.LindaSonrisaDB.VISITAS_WEB.First(result => result.ID == 0);
+                return (int)visits.CANTIDAD;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        private int calculatedYears(DateTime birthDate)
+        {
+            int days = (DateTime.Today - birthDate).Days;
+            decimal years = days / 365.25m;
+            return (int)years;
         }
     }
 }
