@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Logeado.Master" AutoEventWireup="true" CodeBehind="SeleccionServicio.aspx.cs" Inherits="PortafolioNet.View.SeleccionServicio" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Logeado.Master" AutoEventWireup="true" CodeBehind="SeleccionServicio.aspx.cs" Inherits="PortafolioNet.View.SeleccionServicio" EnableViewState="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,15 +16,6 @@
                   <label for="servicio" class="col-lg-10 control-label">Seleccione Servicio: </label>
                     <div class="col-lg-10">
                         <asp:DropDownList class="form-control" ID="ddlService" runat="server">
-                             <asp:ListItem Value="0">Consulta general</asp:ListItem>
-                             <asp:ListItem Value="1">Urgencia dental</asp:ListItem>
-                             <asp:ListItem Value="2">Odontopediatría</asp:ListItem>
-                             <asp:ListItem Value="3">Endodoncia</asp:ListItem>
-                             <asp:ListItem Value="4">Peridoncia</asp:ListItem>
-                             <asp:ListItem Value="5">Implantología</asp:ListItem>
-                             <asp:ListItem Value="6">Consulta ortodoncia</asp:ListItem>
-                             <asp:ListItem Value="7">Radiología intra y extra oral y 3D</asp:ListItem>
-                             <asp:ListItem Value="8">Cirugía oral</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>

@@ -12,12 +12,15 @@ namespace PortafolioNet.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                LoadService();
+            }
         }
 
         protected void btnContinuar_Click(object sender, EventArgs e)
         {
-            Service service = new Service() { Id = int.Parse(ddlService.SelectedValue) };
+            Service service = new Service() { Id = getServiceIdByName() };
             if (service.Read())
             {
                 ScheduleHourController schec = new ScheduleHourController()
@@ -34,6 +37,26 @@ namespace PortafolioNet.View
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Response.Redirect("indexLogin.aspx");
+        }
+
+        private void LoadService()
+        {
+            List<string> list = new List<string>();
+            foreach (Service service in ComboBoxDataLoader.ServicesList())
+            {
+                list.Add(service.Description);
+            }
+            ddlService.DataSource = list;
+            ddlService.DataBind();
+        }
+
+        private int getServiceIdByName()
+        {
+            Service service = new Service()
+            {
+                Description = ddlService.SelectedValue
+            };
+            return service.getIdByName();
         }
     }
 }

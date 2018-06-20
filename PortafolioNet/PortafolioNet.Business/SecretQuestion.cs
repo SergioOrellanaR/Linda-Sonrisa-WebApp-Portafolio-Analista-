@@ -54,5 +54,18 @@ namespace PortafolioNet.Business
                 return 0;
             }
         }
+
+        public int getIdByName()
+        {
+            try
+            {
+                Data.PREGUNTA_SECRETA question = Connection.LindaSonrisaDB.PREGUNTA_SECRETA.First(re => re.TXT_PREGUNTA == Question);
+                return (int)question.ID;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
     }
 }

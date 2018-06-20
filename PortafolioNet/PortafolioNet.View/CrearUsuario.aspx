@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Normal.Master" AutoEventWireup="true" CodeBehind="CrearUsuario.aspx.cs" Inherits="PortafolioNet.View.CrearUsuario" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Normal.Master" AutoEventWireup="true" CodeBehind="CrearUsuario.aspx.cs" Inherits="PortafolioNet.View.CrearUsuario" EnableViewState="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -84,11 +84,6 @@
                   <label for="Comuna" class="col-lg-10 control-label">Comuna: </label>
                     <div class="col-lg-16">
                         <asp:DropDownList class="form-control" ID="ddlCommune" runat="server">
-                             <asp:ListItem Value="0">Alhue</asp:ListItem>
-                             <asp:ListItem Value="1">Buin</asp:ListItem>
-                             <asp:ListItem Value="2">Calera De Tango</asp:ListItem>
-                             <asp:ListItem Value="3">Cerrillos</asp:ListItem>
-                             <asp:ListItem Value="25">Maipú</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>
@@ -135,10 +130,6 @@
                   <label for="preguntasecreta" class="col-lg-10 control-label">Pregunta Secreta: </label>
                     <div class="col-lg-16">
                         <asp:DropDownList class="form-control" ID="ddlSecretQuestion" runat="server">
-                             <asp:ListItem Value="0">¿Cual es el nombre de tu primera mascota?</asp:ListItem>
-                             <asp:ListItem Value="1">¿Cuál fue el primer colegio donde estudiaste?</asp:ListItem>
-                             <asp:ListItem Value="2">Nombre de la primera empresa donde trabajaste.</asp:ListItem>
-                             <asp:ListItem Value="3">¿En qué lugar nació tu madre?</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>

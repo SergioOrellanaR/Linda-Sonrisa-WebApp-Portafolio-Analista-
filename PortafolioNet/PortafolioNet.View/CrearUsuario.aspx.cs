@@ -12,7 +12,11 @@ namespace PortafolioNet.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                LoadCommune();
+                LoadSecretQuestion();
+            }
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
@@ -28,7 +32,7 @@ namespace PortafolioNet.View
                 {
                     Username = txtUsername.Text,
                     Password = txtPassword.Text,
-                    IdSecretQuestion = int.Parse(ddlSecretQuestion.SelectedValue),
+                    IdSecretQuestion = getSecretQuestionByText(),
                     AnswerSecretQuestion = txtRespuestaSecreta.Text
                 };
 
@@ -52,7 +56,7 @@ namespace PortafolioNet.View
                         Phone = int.Parse(txtPhone.Text),
                         Vulnerable = 0,
                         Gender = ddlGender.SelectedValue,
-                        IdCommune = int.Parse(ddlCommune.SelectedValue),
+                        IdCommune = getCommuneIdByName(),
                         User = user,
                         BirthDate = DateTime.Parse(txtFechaNacimiento.Text)
                     };
@@ -127,6 +131,48 @@ namespace PortafolioNet.View
         protected void CustomValidator4_ServerValidate(object source, ServerValidateEventArgs args)
         {
             args.IsValid = isValidRut(txtRut.Text);
+        }
+
+        private void LoadCommune()
+        {
+            List<string> list = new List<string>();
+            foreach (Commune commune in ComboBoxDataLoader.CommuneList())
+            {
+                list.Add(commune.Name);
+            }
+            ddlCommune.AutoPostBack = false;
+            ddlCommune.DataSource = list;
+            ddlCommune.DataBind();
+        }
+
+        private void LoadSecretQuestion()
+        {
+            List<string> list = new List<string>();
+            foreach (SecretQuestion question in ComboBoxDataLoader.secretQuestionList())
+            {
+                list.Add(question.Question);
+            }
+            ddlSecretQuestion.AutoPostBack = false;
+            ddlSecretQuestion.DataSource = list;
+            ddlSecretQuestion.DataBind();
+        }
+
+        private int getCommuneIdByName()
+        {
+            Commune com = new Commune()
+            {
+                Name = ddlCommune.SelectedValue
+            };
+            return com.getIdByName();
+        }
+
+        private int getSecretQuestionByText()
+        {
+            SecretQuestion question = new SecretQuestion()
+            {
+                Question = ddlSecretQuestion.SelectedValue
+            };
+            return question.getIdByName();
         }
     }
 }
