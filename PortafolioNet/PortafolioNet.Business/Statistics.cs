@@ -201,21 +201,26 @@ namespace PortafolioNet.Business
         {
             try
             {
-                int maxSolicitedDay = 0;
-                DateTime date = DateTime.Now;
-                string maxDay = "";
-                List<Data.HORA> list = Connection.LindaSonrisaDB.HORA.ToList();
-                foreach (Data.HORA hour in list)
+                List<Data.HORA> hourList = Connection.LindaSonrisaDB.HORA.ToList();
+                List<DateTime> list = new List<DateTime>();
+                foreach (Data.HORA hour in hourList)
                 {
-                    DateTime temporalDate = hour.FECHA_HORA.Date;
-                    int temporalNumber = Connection.LindaSonrisaDB.HORA.Count(result => result.FECHA_HORA.Date == temporalDate);
-                    if (temporalNumber > maxSolicitedDay)
+                    list.Add(hour.FECHA_HORA.Date);
+                }
+
+                int maxNumber = 0;
+                DateTime maxDate = DateTime.Now;
+
+                foreach (DateTime date in list)
+                {
+                    int temporalNumber = list.Count(result => result == date);
+                    if (temporalNumber > maxNumber)
                     {
-                        maxSolicitedDay = temporalNumber;
-                        maxDay = temporalDate.ToString("dd/mm/yyyy");
+                        maxDate = date;
+                        maxNumber = temporalNumber;
                     }
                 }
-                return maxDay;
+                return maxDate.ToShortDateString();
             }
             catch (Exception e)
             {
@@ -256,11 +261,14 @@ namespace PortafolioNet.Business
                 List<Data.FUNCIONARIO> func = Connection.LindaSonrisaDB.FUNCIONARIO.ToList();
                 foreach (Data.FUNCIONARIO dentist in func)
                 {
-                    int temporalNumber = Connection.LindaSonrisaDB.HORA.Count(result => result.RUT_FUNCIONARIO == dentist.RUT);
-                    if (temporalNumber < lessNumberOfHours)
+                    if (dentist.ID_TIPO == 1)
                     {
-                        lessNumberOfHours = temporalNumber;
-                        lessFunctionaryName = dentist.P_NOMBRE + " " + dentist.P_APELLIDO;
+                        int temporalNumber = Connection.LindaSonrisaDB.HORA.Count(result => result.RUT_FUNCIONARIO == dentist.RUT);
+                        if (temporalNumber < lessNumberOfHours)
+                        {
+                            lessNumberOfHours = temporalNumber;
+                            lessFunctionaryName = dentist.P_NOMBRE + " " + dentist.P_APELLIDO;
+                        }
                     }
                 }
                 return lessFunctionaryName;
