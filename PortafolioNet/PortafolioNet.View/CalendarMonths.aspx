@@ -14,6 +14,40 @@
         </div>
     </div>
 
+    <section class="section">
+      <div class="container">
+            <div class="col-md-10 mb-4 element-animate">
+                <div class="row">
+                    <div class="col-md-4 col- form-group">   
+                       <h3><asp:Label ID="Label1" runat="server" Text="Tipos de botones: " Width="300"></asp:Label> </h3> 
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <img src="images/botones.png" width="400"/>           
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>              
+          </div>
+    </section>
+    <hr>
+
+    <section class="section">
+      <div class="container">
+            <div class="col-md-10 mb-4 element-animate">
+                <div class="row">
+                    <div class="col-md-4 col- form-group">   
+                       <h3><asp:Label ID="lblErrorText" runat="server" Text="Tipos de botones: "></asp:Label> </h3> 
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <asp:Button ID="btnPrueba" runat="server" Text="Disponible" CssClass="btn btn-primary btn-lg btn-block"/>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-md-3 form-group">   
+                        <asp:Button ID="btnPrueba2"  runat="server"  Text="No Disponible" CssClass="btn btn-danger btn-lg btn-block" Enabled="false"/>           
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>              
+          </div>
+    </section>
+    <hr>
 
    <section class="section">
       <div class="container">

@@ -226,6 +226,7 @@
     <Content Include="bin\PortafolioNet.Data.dll.config" />
     <Content Include="bin\PortafolioNet.View.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="images\botones.png" />
     <Content Include="images\Logo.png" />
     <Content Include="images\Luis Jara.jpg" />
     <Content Include="images\Marco Molina.jpg" />
