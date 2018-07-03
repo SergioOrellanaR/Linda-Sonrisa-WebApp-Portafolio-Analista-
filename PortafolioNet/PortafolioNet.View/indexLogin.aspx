@@ -173,7 +173,7 @@
       <div class="col-md-3 col-sm-6">
         <div class="person"> <img src="images/Marco Medina.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Marco Medina</h4>
+            <h4>Marco Molina</h4>
             <h5 class="role">Odontologo</h5>
             <p>Profesional titulado de Odontologia de la Pontifice Universidad Catolica de Chile</p>
           </div>
