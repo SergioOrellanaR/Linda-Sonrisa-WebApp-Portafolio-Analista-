@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PortafolioNet.Business.Client" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEgQACAAAACAAAAAAAQgAABAAEACAUAAIAEAEAI=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.ComboBoxDataLoader" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIBAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComboBoxDataLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Commune" Collapsed="true">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Commune.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Connection" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Contact">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAACAAAAAAAAAAAAQAAAAAAEAAAAAAIAAAAAA=</HashCode>
+      <FileName>Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Day" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAAAAAAAAAAAAAAAAAgIAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Hour" Collapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAIAAAgAAAAAAAAgAAEAAEAAAAgAAAAAAAA=</HashCode>
+      <FileName>Hour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.MailSender">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAgCBCAAAAAIEAAgAAAAAIAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>MailSender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.ScheduleHourController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkACIEJAAAAAABAAAIAAAAAAAAAAAEAAAAAAAEBAA=</HashCode>
+      <FileName>ScheduleHourController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.SecretQuestion" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAgAEAAAEAEAABAAAAAAAA=</HashCode>
+      <FileName>SecretQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.SequencerController" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SequencerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Service" Collapsed="true">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAgAAAAAAAAgAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.Statistics">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAgCBCQgAAAAYAAAABIEREAABAQEBkIEAAgABAAA=</HashCode>
+      <FileName>Statistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.User">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAACAAAAAQCAAAIgAAgAAEACAAAAAQAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortafolioNet.Business.VisitNumber" Collapsed="true">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAgAAAAAA=</HashCode>
+      <FileName>VisitNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

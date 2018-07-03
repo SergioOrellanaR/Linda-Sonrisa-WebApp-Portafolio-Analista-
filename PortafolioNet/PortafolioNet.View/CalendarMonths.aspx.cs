@@ -13,7 +13,9 @@ namespace PortafolioNet.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ScheduleHour"] != null)
+            if (!Page.IsPostBack)
+            { 
+                if (Session["ScheduleHour"] != null)
             {
                 DateTime dateLoader;
                 if (Session["DateLoader"]!=null)
@@ -44,6 +46,7 @@ namespace PortafolioNet.View
             else
             {
                 Response.Redirect("indexLogin.aspx");
+            }
             }
         }
 
